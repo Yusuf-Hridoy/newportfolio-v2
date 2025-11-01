@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon-icon.png" />
+    <title>Md Yusuf Ahmed | Portfolio</title>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="yusuf.css">
+    <link rel="stylesheet" href="utility.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --primary-color: #5361FF;
+          --secondary-color: #08c5f5;
+          --dark-bg: #101820;
+          --text-light: #f7f7f7;
+        }
+        
+        * {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        /* Removed problematic body styles - handled in external CSS */
+        
+        .header {
+          text-align: center;
+          margin-bottom: 40px;
+        }
+        
+        .header h1 {
+          font-size: 3rem;
+          margin-bottom: 10px;
+          color: var(--secondary-color);
+        }
+        
+        .header p {
+          font-size: 1.5rem;
+        }
+        
+        .section {
+          margin-bottom: 40px;
+        }
+        
+        .section-title {
+          font-size: 2rem;
+          margin-bottom: 20px;
+          color: var(--primary-color);
+          border-bottom: 2px solid var(--primary-color);
+          padding-bottom: 10px;
+        }
+        
+        .card {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 10px;
+          padding: 20px;
+          margin-bottom: 20px;
+        }
+        
+        .card h3 {
+          color: var(--secondary-color);
+          margin-bottom: 10px;
+        }
+        
+        .btn {
+          display: inline-block;
+          background: var(--primary-color);
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+          text-decoration: none;
+          margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Theme toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- header section starts  -->
+    <header>
+        <div class="user">
+            <div class="profile-img">
+                <img src="photo/punjabi selfie.jpg" alt="Profile image">
+            </div>
+            <h3 class="name">Md Yusuf Ahmed</h3>
+            <p class="post">Software QA Engineer</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" class="menu-links active-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="menu-links"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#education" class="menu-links"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#experience" class="menu-links"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="#projects" class="menu-links"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="#certifications" class="menu-links"><i class="fas fa-certificate"></i> Certifications</a></li>
+                <li><a href="#skills" class="menu-links"><i class="fas fa-laptop-code"></i> Skills</a></li>
+                <li><a href="#contact" class="menu-links"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Yusuf-Hridoy" target="_blank"><i class="fab fa-github"></i></a>
+           
+        </div>
+    </header>
+    <!-- header section ends -->
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <!-- home section starts  -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="text-content">
+                <h3>Hello, I'm</h3>
+                <h1 class="typing">Md Yusuf Ahmed</h1>
+                <p>A Software QA Engineer from Bangladesh with a curious mind for data and a passion for making sure every piece of software works perfectly.</p>
+                <div class="cta-buttons">
+                    <a href="#about" class="btn">About Me <i class="fas fa-user"></i></a>
+                    <a href="#contact" class="btn btn-outline">Contact Me <i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="home-img">
+                <div class="shape"></div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about">
+                <div class="mouse">
+                    <span></span>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- home section ends -->
+
+    <!-- about section starts  -->
+    <section class="about" id="about">
+        <h1 class="section-heading">About <span>Me</span></h1>
+        <div class="row">
+            <div class="info">
+                <h2 class="sub-heading">Personal Info</h2>
+                <div class="info-item">
+                    <span class="info-title">Name:</span>
+                    <span class="info-value">Md Yusuf Ahmed</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-title">Qualification:</span>
+                    <span class="info-value">B.Sc. Engg in CSE</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-title">Designation:</span>
+                    <span class="info-value">SQA Engineer</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-title">Nationality:</span>
+                    <span class="info-value">Bangladeshi <img src="Flag icon/bangladesh.png" class="country-flag" alt="Bangladesh flag"></span>
+                </div>
+                <div class="info-item">
+                    <span class="info-title">Languages:</span>
+                    <span class="info-value">Bangla & English</span>
+                </div>
+                <a href="https://drive.google.com/file/d/14OFbS0hhTDD9JAwYDANfbzAFIk76jovA/view?usp=drive_link" target="_blank" class="btn">
+                    See My Resume <i class="fas fa-download"></i>
+                </a>
+            </div>
+            <div class="social">
+                <h2 class="sub-heading">Contact Info</h2>
+                <div class="social-item">
+                    <div class="icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="details">
+                        <h3>Phone</h3>
+                        <a href="tel:+8801793527440">+880 1793527440</a>
+                    </div>
+                </div>
+                <div class="social-item">
+                    <div class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="details">
+                        <h3>Email</h3>
+                        <a href="mailto:yusufahmed.sdet@gmail.com">yusufahmed.sdet@gmail.com</a>
+                    </div>
+                </div>
+                <div class="social-item">
+                    <div class="icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="details">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank">Md Yusuf Ahmed</a>
+                    </div>
+                </div>
+                <div class="social-item">
+                    <div class="icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="details">
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/Yusuf-Hridoy" target="_blank">Yusuf-Hridoy</a>
+                    </div>
+                </div>
+                <div class="social-item">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="details">
+                        <h3>Location</h3>
+                        <span>Dhaka, Bangladesh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section ends -->
+
+    <!-- education section starts  -->
+    <section class="education" id="education">
+        <h1 class="section-heading">My <span>Education</span></h1>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="date">2022</span>
+                    <h3>B.Sc. Engg In CSE</h3>
+                    <p>City University</p>
+                    <a href="https://www.cityuniversity.edu.bd/" target="_blank" class="institution-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Institution
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="date">2017</span>
+                    <h3>HSC (Science)</h3>
+                    <p>Govt Bangla College</p>
+                    <a href="https://www.sarkaribanglacollege.gov.bd/" target="_blank" class="institution-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Institution
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="date">2014</span>
+                    <h3>SSC (Science)</h3>
+                    <p>Mirpur Govt High School</p>
+                    <a href="https://www.mirpurghs.edu.bd/" target="_blank" class="institution-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Institution
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- education section ends -->
+
+    <section class="experience" id="experience">
+        <h1 class="section-heading">My <span>Experience</span></h1>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="date">Aug 2025 - Present</span>
+                    <h3> Software QA Engineer  </h3>
+                    <p class="company">SDS Manager </p>
+                    <div class="responsibilities">
+                        <h4>Job Responsibilities:</h4>
+                        <ul>
+                            <p>Domain : Chemical Management System</p>
+                            <li> Designed, developed, and executed test cases based on business and technical requirements for the Safety Data Sheets (SDS) product. </li>
+                            <li> Performed functional, regression, integration, and UAT testing while automating scenarios with Playwright and Automation tool. </li>
+                            <li> Conducted API and performance testing using Postman and JMeter, and validated data integrity with PostgreSQL. </li>
+                            <li> Identified, logged, and tracked defects, ensuring accurate severity assessment and timely resolution. </li>
+                            <li> Reported test progress, results, and release readiness to Product Owners and stakeholders within Agile/Scrum ceremonies.</li>
+                            <li> Took ownership of overall product quality by certifying releases, ensuring compliance with functional and non-functional requirements. </li>
+                        </ul>
+                    </div>
+                    <a href="https://sdsmanager.com/us/sds-management/" target="_blank" class="company-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Company
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="date">Oct 2024 - July 2025</span>
+                    <h3> Product Acceptance Analyst </h3>
+                    <p class="company">SELISE Digital Platforms</p>
+                    <div class="responsibilities">
+                        <h4>Job Responsibilities:</h4>
+                        <ul>
+                            <p>Domain : Finance</p>
+                            <li>Analyze project requirements and product objectives to design, maintain, and execute comprehensive test cases..</li>
+                            <li>Develop and implement test plans, prioritize testing activities, and coordinate with development teams to ensure seamless software releases.</li>
+                            <li>Estimate test efforts, track defects, and participate in day-to-day QA activities, ensuring quality standards are met.</li>
+                            <li>Automate web application testing using Selenium & Cypress, improving test efficiency and accuracy.</li>
+                            <li>Perform API testing and automation using Postman, ensuring reliable backend performance.</li>
+                            <li>Manage and track issues in Azure Boards, collaborating closely with developers to ensure timely bug resolution.</li>
+                        </ul>
+                    </div>
+                    <a href="https://selisegroup.com/" target="_blank" class="company-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Company
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="date">May 2023 - Sep 2024</span>
+                    <h3>SQA Engineer</h3>
+                    <p class="company">Banglalink</p>
+                    <div class="responsibilities">
+                        <h4>Job Responsibilities:</h4>
+                        <ul>
+                            <p>Domain : Telco & Digital Product</p>
+                            <li>Collaborated on QA activities for MyBL App, Website, and eShop, ensuring smooth functionality and a high-quality user experience.</li>
+                            <li>Analyzed and validated business requirements and technical designs, identifying gaps and improving requirement clarity.</li>
+                            <li>Developed & executed comprehensive test plans and test cases, improving test coverage and minimizing post-release defects.</li>
+                            <li>Executed regression & sanity tests, detecting and resolving critical defects, ensuring a bug-free release.</li>
+                            <li> Tracked and reported issues in JIRA, working closely with developers to ensure timely bug resolution.</li>
+                            <li>Enhanced AI chatbot model for Banglalink RYZE App, refining response accuracy through real-world training datasets.</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.banglalink.net/en" target="_blank" class="company-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Company
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="timeline-content">
+                    <span class="date">Jun 2022 - Sep 2022</span>
+                    <h3>Operation ERP System</h3>
+                    <p class="company">Dewhitst Shanta</p>
+                    <div class="responsibilities">
+                        <h4>Job Responsibilities:</h4>
+                        <ul>
+                            <li>Resolved issues, enhanced operations, and troubleshoot problems.</li>
+                            <li>Prepared variety reports and documents.</li>
+                            <li>Used coordination and planning skills to achieve results according to schedule.</li>
+                            <li>Designed and executed performance improvement strategies to drive continuous improvement.</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.dewhirst.com/location/bangladesh-manufacturing-and-laundry/" target="_blank" class="company-link">
+                        <i class="fas fa-external-link-alt"></i> Visit Company
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- experience section ends -->
+
+    <!-- projects section starts -->
+    <section class="projects" id="projects">
+        <h1 class="section-heading">My <span>Projects</span></h1>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="skills/selenium.jpg" alt="Selenium Web Automation">
+                </div>
+                <div class="project-content">
+                    <h3>E-commerce Testing Using Selenium and Java</h3>
+                    <p>Comprehensive automated testing framework for e-commerce applications built with the Page Object Model (POM) design pattern. Features cross-browser testing, data-driven testing, and detailed reporting capabilities.</p>
+                    <div class="project-tech">
+                        <span>Selenium</span>
+                        <span>Java</span>
+                        <span>POM</span>
+                        <span>TestNG</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Yusuf-Hridoy/Web-Automation-Monarch-Mart" target="_blank" class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="skills/testing.png" alt="API Testing Framework">
+                </div>
+                <div class="project-content">
+                    <h3>API Testing and Automation Using Postman</h3>
+                    <p>Robust API testing framework using Postman and Newman for comprehensive REST API validation. Includes automated test execution, environment management, and CI/CD integration capabilities.</p>
+                    <div class="project-tech">
+                        <span>Postman</span>
+                        <span>Newman</span>
+                        <span>JavaScript</span>
+                        <span>JSON</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Yusuf-Hridoy/API-Testing" target="_blank" class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="skills/Appium.png" alt="Mobile App Testing">
+                </div>
+                <div class="project-content">
+                    <h3>Mobile App Testing Using Appium Java and Selenium</h3>
+                    <p>Comprehensive mobile testing solution for Android applications using Appium framework. Features real device testing, cloud testing integration, and automated test execution with detailed reporting.</p>
+                    <div class="project-tech">
+                        <span>Appium</span>
+                        <span>Java</span>
+                        <span>Maven</span>
+                        <span>TestNG</span>
+                        <span>BrowserStack</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Yusuf-Hridoy/App-Automation-Mobile" target="_blank" class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="skills/cypress.png" alt="Cypress Automation">
+                </div>
+                <div class="project-content">
+                    <h3>HR Module Testing Using Cypress and JavaScript</h3>
+                    <p>Modern end-to-end testing framework for HR management systems using Cypress. Built with Page Object Model pattern featuring real-time browser testing, automatic screenshots, and time-travel debugging.</p>
+                    <div class="project-tech">
+                        <span>Cypress</span>
+                        <span>JavaScript</span>
+                        <span>POM</span>
+                        <span>Mocha</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Yusuf-Hridoy/Cypress-Web-Automation" target="_blank" class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </section>
+    <!-- projects section ends -->
+
+    <!-- certifications section starts  -->
+    <section class="certifications" id="certifications">
+        <h1 class="section-heading">My <span>Certifications</span></h1>
+        <div class="certifications-container">
+            <div class="certification-card">
+                <div class="certification-logo">
+                    <img src="Certificate/WhatsApp Image 2021-03-08 at 10.29.13 PM.jpeg" alt="IT Training BD">
+                </div>
+                <div class="certification-content">
+                    <h3>Software Quality Assurance & Cyber Security</h3>
+                    <p class="issuer">IT Training BD</p>
+                    <p class="issue-date">Issued June 2023</p>
+                    <a href="https://drive.google.com/file/d/17BkT3XC8TMsLJaWAghpdb8wCVa3LK3_x/view?usp=sharing" target="_blank" class="view-certificate">
+                        View Certificate <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="certification-card">
+                <div class="certification-logo">
+                    <img src="Certificate/microsoft_logo.jpg" alt="Microsoft">
+                </div>
+                <div class="certification-content">
+                    <h3>Career Essentials in Generative AI</h3>
+                    <p class="issuer">Microsoft and LinkedIn</p>
+                    <p class="issue-date">Issued July 2024</p>
+                    <a href="https://www.linkedin.com/learning/certificates/df563d9b37ba9d8db9a34430b234e7bb31881f621e4339a20adb6954388c6538" target="_blank" class="view-certificate">
+                        View Certificate <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- certifications section ends -->
+
+    <!-- skills section starts  -->
+    <section class="skills" id="skills">
+        <h1 class="section-heading">My <span>Skills</span></h1>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>SQA Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-tooltip="Selenium">
+                        <img src="skills/selenium.jpg" alt="Selenium">
+                        <p style="font-size: 20px;">Selenium</p>
+                        
+                    </div>
+                    <div class="skill-item" data-tooltip="Cypress">
+                        <img src="skills/cypress.png" alt="Cypress">
+                        <p style="font-size: 20px;">Cypress</p>
+                         
+                    </div>
+                    <div class="skill-item" data-tooltip="Postman">
+                        <img src="skills/postman.svg" alt="Postman">
+                        <p style="font-size: 20px;">Postman</p>
+                    </div>
+                    <div class="skill-item" data-tooltip="JMeter">
+                        <img src="skills/jmeter.jpg" alt="JMeter">
+                        <p style="font-size: 20px;">jmeter</p>
+                    </div>
+                    <div class="skill-item" data-tooltip="JMeter">
+                        <img src="skills/Appium.png" alt="JMeter">
+                        <p style="font-size: 20px;">Appium</p>
+                </div>
+                <div class="skill-item" data-tooltip="JMeter">
+                    <img src="skills/playwright-logo-png_seeklogo-435674.png" alt="JMeter">
+                    <p style="font-size: 20px;">Playwright</p>
+            </div>
+            </div>
+
+
+            <div class="skills-category">
+                <h3>Programming Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-tooltip="Python">
+                        <img src="languege/python.png" alt="Python">
+                        <p style="font-size: 20px;">Python</p>
+                    </div>
+                    <div class="skill-item" data-tooltip="C">
+                        <img src="languege/letter-c.png" alt="C">
+                        <p style="font-size: 20px;">C</p>
+                    </div>
+                    <div class="skill-item" data-tooltip="Java">
+                        <img src="languege/java.png" alt="Java">
+                        <p style="font-size: 20px;">Java</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Web Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-tooltip="HTML">
+                        <img src="web tech/html.png" alt="HTML">
+                        <p style="font-size: 20px;">HTML</p>
+                    </div>
+                    <div class="skill-item" data-tooltip="CSS">
+                        <img src="web tech/css.png" alt="CSS">
+                        <p style="font-size: 20px;">CSS</p>
+                    </div>
+                    <div class="skill-item" data-tooltip="MySQL">
+                        <img src="web tech/mysql.png" alt="MySQL">
+                        <p style="font-size: 20px;">MySQL</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Version Control</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-tooltip="Git">
+                        <img src="version/git.png" alt="Git">
+                        <p style="font-size: 20px;">Git</p>
+                    </div>
+                    <div class="skill-item" data-tooltip="GitHub">
+                        <img src="version/github.png" alt="GitHub">
+                        <p style="font-size: 20px;">GitHub</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Bug Tracking Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" data-tooltip="JIRA">
+                        <img src="skills/jira.png" alt="JIRA">
+                        <p style="font-size: 20px;">JIRA</p>
+                    </div>
+                    <div class="skill-item" data-tooltip="Azure">
+                        <img src="skills/Azure.png" alt="Azure">
+                        <p style="font-size: 20px;">Azure Board</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- skills section ends -->
+
+    <!-- contact section starts  -->
+    <section class="contact" id="contact">
+        <h1 class="section-heading"><span>Contact</span> Me</h1>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Feel free to reach out to me through any of these channels:</p>
+                
+                <div class="contact-item">
+                    <div class="icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="details">
+                        <h4>Phone</h4>
+                        <a href="tel:+8801793527440">+880 1793527440</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="details">
+                        <h4>WhatsApp</h4>
+                        <a href="https://wa.me/8801793527440">+880 1793527440</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <div class="details">
+                        <h4>Telegram</h4>
+                        <a href="https://t.me/8801793527440">+880 1793527440</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="details">
+                        <h4>Email</h4>
+                        <a href="mailto:yusufahmed.sdet@gmail.com">yusufahmed.sdet@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="details">
+                        <h4>Location</h4>
+                        <span>Dhaka, Bangladesh</span>
+                    </div>
+                </div>
+                
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Yusuf-Hridoy" target="_blank"><i class="fab fa-github"></i></a>
+                   
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Me a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Subject" required>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" required></textarea>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    
+                    <button type="submit" class="btn">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+    <!--  <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116833.8318789773!2d90.33728815181978!3d23.780975728157546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1720255232281!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> -->  
+    </section>
+    <!-- contact section ends -->
+
+    <!-- footer section starts -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+               
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Yusuf-Hridoy" target="_blank"><i class="fab fa-github"></i></a>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Md Yusuf Ahmed. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- footer section ends -->
+
+    <!-- scroll top button  -->
+    <a href="#home" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- JavaScript link  -->
+    <script src="driver.js"></script>
+</body>
+
+</html>
+
