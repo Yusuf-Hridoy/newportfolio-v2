@@ -1,3 +1,13 @@
+// Page Loader
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".page-loader")
+  if (loader) {
+    setTimeout(() => {
+      loader.classList.add("loaded")
+    }, 600)
+  }
+})
+
 // DOM Elements
 const menuBtn = document.getElementById("menu")
 const header = document.querySelector("header")
@@ -5,7 +15,6 @@ const themeToggle = document.querySelector(".theme-toggle")
 const scrollTopBtn = document.querySelector(".scroll-top")
 const navLinks = document.querySelectorAll(".menu-links")
 const sections = document.querySelectorAll("section")
-const contactForm = document.getElementById("contactForm")
 
 // Set current year in footer
 document.getElementById("year").textContent = new Date().getFullYear()
@@ -44,7 +53,7 @@ if (savedTheme === "light") {
   themeToggle.innerHTML = '<i class="fas fa-sun"></i>'
 }
 
-// Scroll to top button
+// Scroll to top button & active nav tracking
 window.addEventListener("scroll", () => {
   if (window.scrollY > 500) {
     scrollTopBtn.classList.add("active")
@@ -93,119 +102,27 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   })
 })
 
-// Form validation
-if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault()
-
-    const nameInput = document.getElementById("name")
-    const emailInput = document.getElementById("email")
-    const subjectInput = document.getElementById("subject")
-    const messageInput = document.getElementById("message")
-
-    let isValid = true
-
-    // Validate name
-    if (nameInput.value.trim() === "") {
-      setErrorFor(nameInput)
-      isValid = false
-    } else {
-      setSuccessFor(nameInput)
-    }
-
-    // Validate email
-    if (emailInput.value.trim() === "" || !isValidEmail(emailInput.value)) {
-      setErrorFor(emailInput)
-      isValid = false
-    } else {
-      setSuccessFor(emailInput)
-    }
-
-    // Validate subject
-    if (subjectInput.value.trim() === "") {
-      setErrorFor(subjectInput)
-      isValid = false
-    } else {
-      setSuccessFor(subjectInput)
-    }
-
-    // Validate message
-    if (messageInput.value.trim() === "") {
-      setErrorFor(messageInput)
-      isValid = false
-    } else {
-      setSuccessFor(messageInput)
-    }
-
-    if (isValid) {
-      // Form is valid, you can submit it or show success message
-      alert("Message sent successfully!")
-      contactForm.reset()
-
-      // Remove all success classes
-      document.querySelectorAll(".form-group").forEach((group) => {
-        group.classList.remove("success")
-      })
-    }
-  })
-}
-
-// Helper functions for form validation
-function setErrorFor(input) {
-  const formGroup = input.parentElement
-  formGroup.classList.remove("success")
-  formGroup.classList.add("error")
-}
-
-function setSuccessFor(input) {
-  const formGroup = input.parentElement
-  formGroup.classList.remove("error")
-  formGroup.classList.add("success")
-}
-
-function isValidEmail(email) {
-  const re =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  return re.test(String(email).toLowerCase())
-}
-
-// Calculate experience duration
-function calculateExperienceDuration(startDate) {
-  const start = new Date(startDate)
-  const today = new Date()
-
-  const monthsDiff = (today.getFullYear() - start.getFullYear()) * 12 + (today.getMonth() - start.getMonth())
-
-  const years = Math.floor(monthsDiff / 12)
-  const months = monthsDiff % 12
-
-  let durationString = ""
-
-  if (years > 0) {
-    durationString += years === 1 ? "1 yr " : `${years} yrs `
-  }
-
-  if (months > 0) {
-    durationString += months === 1 ? "1 mo" : `${months} mos`
-  }
-
-  return durationString.trim()
-}
-
-// Update experience duration on page load
-document.addEventListener("DOMContentLoaded", () => {
-  const experienceDurations = document.querySelectorAll(".experience-duration")
-
-  if (experienceDurations.length > 0) {
-    experienceDurations.forEach((element) => {
-      const startDate = element.getAttribute("data-start-date")
-      if (startDate) {
-        element.textContent = calculateExperienceDuration(startDate)
+// Intersection Observer for reveal animations
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible")
       }
     })
+  },
+  {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
   }
+)
 
-  // Typing animation for home section
+document.querySelectorAll(".reveal").forEach((el) => {
+  revealObserver.observe(el)
+})
+
+// Typing animation for home section
+document.addEventListener("DOMContentLoaded", () => {
   const typingElement = document.querySelector(".typing")
   if (typingElement) {
     const text = typingElement.textContent
@@ -216,28 +133,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (i < text.length) {
         typingElement.textContent += text.charAt(i)
         i++
-        setTimeout(typeWriter, 100)
+        setTimeout(typeWriter, 80)
       }
     }
 
     typeWriter()
   }
 })
-
-// Add animation on scroll
-const animateOnScroll = () => {
-  const elements = document.querySelectorAll(".timeline-item, .project-card, .certification-card, .skill-item")
-
-  elements.forEach((element) => {
-    const elementPosition = element.getBoundingClientRect().top
-    const screenPosition = window.innerHeight / 1.2
-
-    if (elementPosition < screenPosition) {
-      element.classList.add("animate")
-    }
-  })
-}
-
-window.addEventListener("scroll", animateOnScroll)
-window.addEventListener("load", animateOnScroll)
-
