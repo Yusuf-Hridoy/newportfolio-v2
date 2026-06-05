@@ -794,6 +794,21 @@ header {
 }
 
 /* About Section */
+.github-stats {
+  max-width: 110rem;
+  margin: 0 auto 4rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.github-stats img {
+  max-width: 35rem;
+  width: 100%;
+  height: auto;
+}
+
 .about .row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1097,6 +1112,52 @@ header {
   margin-top: auto;
 }
 
+.featured-project {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.featured-project .project-img {
+  height: 100%;
+  min-height: 25rem;
+}
+
+.project-icon-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  color: var(--primary);
+}
+
+.project-badge {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background: rgba(0, 212, 170, 0.1);
+  border: 1px solid rgba(0, 212, 170, 0.2);
+  border-radius: var(--radius-xl);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.8rem;
+}
+
+body.light .project-badge {
+  background: rgba(0, 212, 170, 0.08);
+  color: #059669;
+}
+
+body.light .project-icon-placeholder {
+  background: rgba(108, 99, 255, 0.06);
+  color: var(--primary);
+}
+
 /* Certifications Section */
 .certifications-container {
   display: grid;
@@ -1279,8 +1340,11 @@ header {
 
 /* Contact Section */
 .contact-container {
-  max-width: 60rem;
+  max-width: 110rem;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
 }
 
 .contact-info {
@@ -1368,6 +1432,75 @@ header {
   border-color: transparent;
   color: #fff;
   transform: translateY(-3px);
+}
+
+/* Contact Form */
+.contact-form {
+  background: var(--dark-card);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: 4rem;
+  border: 1px solid var(--dark-border);
+}
+
+.contact-form h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  font-family: "Inter", sans-serif;
+  transition: var(--transition);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 12rem;
+}
+
+body.light .contact-form {
+  background: var(--light-surface);
+  border: 1px solid var(--light-border);
+}
+
+body.light .form-group input,
+body.light .form-group textarea {
+  background: var(--light-bg);
+  border-color: var(--light-border);
+  color: var(--text-dark);
+}
+
+body.light .form-group input::placeholder,
+body.light .form-group textarea::placeholder {
+  color: var(--text-dark-secondary);
 }
 
 /* Footer */
@@ -1493,6 +1626,14 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .featured-project {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-project .project-img {
+    min-height: 20rem;
+  }
+
   .skills-container {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -1529,6 +1670,7 @@ footer {
 
   .contact-container {
     max-width: 100%;
+    grid-template-columns: 1fr;
   }
 }
 
