@@ -1,13 +1,3 @@
-// Page Loader
-window.addEventListener("load", () => {
-  const loader = document.querySelector(".page-loader")
-  if (loader) {
-    setTimeout(() => {
-      loader.classList.add("loaded")
-    }, 600)
-  }
-})
-
 // DOM Elements
 const menuBtn = document.getElementById("menu")
 const header = document.querySelector("header")
