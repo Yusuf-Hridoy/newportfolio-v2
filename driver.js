@@ -1,132 +1,119 @@
 // DOM Elements
-const menuBtn = document.getElementById("menu")
-const header = document.querySelector("header")
-const themeToggle = document.querySelector(".theme-toggle")
+const root = document.documentElement
+const siteHeader = document.querySelector(".site-header")
+const navList = document.getElementById("nav-links")
+const menuBtn = document.querySelector(".menu-toggle")
+const themeBtn = document.querySelector(".theme-toggle")
 const scrollTopBtn = document.querySelector(".scroll-top")
-const navLinks = document.querySelectorAll(".menu-links")
-const sections = document.querySelectorAll("section")
+const navLinks = document.querySelectorAll(".nav-link")
 
 // Set current year in footer
 document.getElementById("year").textContent = new Date().getFullYear()
 
-// Toggle menu
-menuBtn.addEventListener("click", () => {
-  menuBtn.classList.toggle("fa-times")
-  header.classList.toggle("active")
-})
-
-// Close menu when clicking outside
-document.addEventListener("click", (e) => {
-  if (!header.contains(e.target) && e.target !== menuBtn) {
-    header.classList.remove("active")
-    menuBtn.classList.remove("fa-times")
-  }
-})
-
-// Theme toggle
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("light")
-
-  if (document.body.classList.contains("light")) {
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>'
-    localStorage.setItem("theme", "light")
-  } else {
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>'
-    localStorage.setItem("theme", "dark")
-  }
-})
-
-// Check for saved theme preference
-const savedTheme = localStorage.getItem("theme")
-if (savedTheme === "light") {
-  document.body.classList.add("light")
-  themeToggle.innerHTML = '<i class="fas fa-sun"></i>'
+// Theme toggle (initial theme is applied inline in <head> to avoid a flash)
+function syncThemeIcon() {
+  const isLight = root.getAttribute("data-theme") === "light"
+  themeBtn.querySelector("i").className = `fas fa-${isLight ? "sun" : "moon"}`
 }
 
-// Scroll to top button & active nav tracking
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 500) {
-    scrollTopBtn.classList.add("active")
-  } else {
-    scrollTopBtn.classList.remove("active")
-  }
-
-  // Active menu based on scroll position
-  let current = ""
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 100
-    const sectionHeight = section.offsetHeight
-
-    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-      current = section.getAttribute("id")
-    }
-  })
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active-link")
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active-link")
-    }
-  })
+themeBtn.addEventListener("click", () => {
+  const next = root.getAttribute("data-theme") === "light" ? "dark" : "light"
+  root.setAttribute("data-theme", next)
+  try {
+    localStorage.setItem("theme", next)
+  } catch (e) {}
+  syncThemeIcon()
 })
 
-// Smooth scrolling for all anchor links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault()
+syncThemeIcon()
 
-    const targetId = this.getAttribute("href")
-    const targetElement = document.querySelector(targetId)
+// Mobile menu
+function setMenu(open) {
+  navList.classList.toggle("open", open)
+  menuBtn.setAttribute("aria-expanded", String(open))
+  menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu")
+  // Swap the icon class rather than innerHTML so the clicked node stays attached
+  // (otherwise the outside-click handler below sees a detached target and closes the menu)
+  menuBtn.querySelector("i").className = `fas fa-${open ? "xmark" : "bars"}`
+}
 
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop - 70,
-        behavior: "smooth",
+menuBtn.addEventListener("click", () => setMenu(!navList.classList.contains("open")))
+
+document.addEventListener("click", (e) => {
+  if (!siteHeader.contains(e.target)) setMenu(false)
+})
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") setMenu(false)
+})
+
+navLinks.forEach((link) => link.addEventListener("click", () => setMenu(false)))
+
+// Header background + scroll-to-top button
+function onScroll() {
+  siteHeader.classList.toggle("scrolled", window.scrollY > 10)
+  scrollTopBtn.classList.toggle("active", window.scrollY > 600)
+}
+
+window.addEventListener("scroll", onScroll, { passive: true })
+onScroll()
+
+// Highlight the nav link for the section in view
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return
+      const id = entry.target.getAttribute("id")
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${id}`)
       })
+    })
+  },
+  { rootMargin: "-45% 0px -50% 0px" }
+)
 
-      // Close mobile menu after clicking
-      header.classList.remove("active")
-      menuBtn.classList.remove("fa-times")
-    }
-  })
-})
+document.querySelectorAll("main section[id]").forEach((section) => sectionObserver.observe(section))
 
-// Intersection Observer for reveal animations
+// Reveal-on-scroll animations
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible")
+        revealObserver.unobserve(entry.target)
       }
     })
   },
-  {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-  }
+  { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
 )
 
-document.querySelectorAll(".reveal").forEach((el) => {
-  revealObserver.observe(el)
-})
+document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el))
 
-// Typing animation for home section
-document.addEventListener("DOMContentLoaded", () => {
-  const typingElement = document.querySelector(".typing")
-  if (typingElement) {
-    const text = typingElement.textContent
-    typingElement.textContent = ""
+// Contact form: submit to Formspree without leaving the page
+const form = document.querySelector(".contact-form")
+const formStatus = form.querySelector(".form-status")
+const submitBtn = form.querySelector('button[type="submit"]')
 
-    let i = 0
-    function typeWriter() {
-      if (i < text.length) {
-        typingElement.textContent += text.charAt(i)
-        i++
-        setTimeout(typeWriter, 80)
-      }
-    }
+form.addEventListener("submit", async (e) => {
+  e.preventDefault()
+  submitBtn.disabled = true
+  formStatus.className = "form-status"
+  formStatus.textContent = "Sending…"
 
-    typeWriter()
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    form.reset()
+    formStatus.classList.add("success")
+    formStatus.textContent = "Thanks! Your message was sent — I'll get back to you soon."
+  } catch (err) {
+    formStatus.classList.add("error")
+    formStatus.textContent = "Something went wrong. Please email me at yusufahmed.sdet@gmail.com instead."
+  } finally {
+    submitBtn.disabled = false
   }
 })

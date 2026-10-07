@@ -1,10 +1,4 @@
 /* Utility Classes */
-.container {
-  max-width: 110rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -28,55 +22,55 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
   outline: 2px solid var(--primary);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 /* Print Styles */
 @media print {
-  header,
+  .site-header,
   .scroll-top,
-  .theme-toggle,
-  #menu,
-  footer {
+  .bg-grid,
+  .bg-glow,
+  .hero-visual,
+  .now-card,
+  .contact-form,
+  .more-projects,
+  .site-footer {
     display: none !important;
   }
 
+  :root {
+    --text: #000;
+    --text-muted: #333;
+    --text-faint: #555;
+    --border: #ddd;
+    --surface: #fff;
+  }
+
   body {
-    padding: 0;
-    color: #000;
     background: #fff;
-  }
-
-  section {
-    padding: 2rem 0;
-    min-height: auto;
-  }
-
-  .section-heading {
     color: #000;
   }
 
-  a {
-    color: #6366F1 !important;
+  .hero,
+  .section {
+    padding: 24px 0;
   }
 
-  .timeline::before {
-    background: #ccc;
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
   }
 
-  .timeline-icon {
-    background: #6366F1;
-    color: #fff;
+  .card {
     box-shadow: none;
+    backdrop-filter: none;
+    break-inside: avoid;
   }
 
-  .timeline-item,
-  .project-card,
-  .certification-card,
-  .skill-item,
-  .contact-info {
-    background: #fff;
-    border: 1px solid #eee;
-    box-shadow: none;
+  .gradient-text,
+  .hero-role {
+    -webkit-text-fill-color: currentColor;
+    background: none;
   }
 }
