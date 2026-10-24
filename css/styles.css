@@ -14,6 +14,7 @@
   --color-text-body: #1E3442;
   --color-text-muted: #45596A;
   --color-text-faint: #546878;
+  --color-role: #7A3D00;
   --color-border: #D6DEE5;
   --color-border-strong: #B5C2CD;
   --color-link: #063852;
@@ -42,6 +43,7 @@
   --color-text-body: #CBD7E0;
   --color-text-muted: #A2B3C1;
   --color-text-faint: #8FA2B2;
+  --color-role: #E6DF44;
   --color-border: #12354A;
   --color-border-strong: #24506A;
   --color-link: #F0A04B;
@@ -142,10 +144,10 @@ time,
 }
 
 .container {
-  max-width: 1120px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding-left: max(20px, 4%);
-  padding-right: max(20px, 4%);
+  padding-left: max(20px, 3%);
+  padding-right: max(20px, 3%);
 }
 
 section {
@@ -301,15 +303,15 @@ section {
 /* ---------- Hero ---------- */
 
 .hero {
-  padding-top: 72px;
-  padding-bottom: 72px;
+  padding-top: 56px;
+  padding-bottom: 0;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 48px;
-  align-items: start;
+  grid-template-columns: 55fr 45fr;
+  gap: 64px;
+  align-items: center;
 }
 
 .test-badge {
@@ -330,13 +332,13 @@ section {
 }
 
 .hero-name {
-  font-size: clamp(40px, 7vw, 56px);
+  font-size: clamp(40px, 7vw, 60px);
   margin-bottom: 10px;
 }
 
 .hero-role {
-  font-size: 22px;
-  color: var(--color-text);
+  font-size: 23px;
+  color: var(--color-role);
   font-weight: 500;
   margin-bottom: 18px;
 }
@@ -364,29 +366,62 @@ section {
 
 /* Right column */
 
-.profile-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 16px;
+.glance-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 24px;
 }
 
-.profile-row img {
-  width: 64px;
-  height: 64px;
+.glance-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.glance-head img {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   border: 1px solid var(--color-border);
   object-fit: cover;
 }
 
-.profile-name {
+.glance-label {
+  font-family: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 13px;
+  color: var(--color-text-faint);
+}
+
+.glance-name {
+  font-size: 17px;
   font-weight: 600;
   color: var(--color-text);
 }
 
-.profile-role {
-  font-size: 14px;
-  color: var(--color-text-muted);
+.glance-facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 12px 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.glance-facts dt {
+  color: var(--color-text-faint);
+}
+
+.glance-facts dd {
+  margin: 0;
+}
+
+.glance-facts a {
+  color: var(--color-link);
+}
+
+.terminal {
+  margin-top: 16px;
 }
 
 .terminal {
@@ -414,6 +449,46 @@ section {
 
 .terminal a {
   color: var(--terminal-ok);
+}
+
+/* ---------- What I do ---------- */
+
+.what-i-do {
+  margin-top: 48px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 32px;
+  padding-bottom: 56px;
+}
+
+.what-i-do-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.what-i-do-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.what-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.what-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.what-card p {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  margin-top: 8px;
 }
 
 /* ---------- Site check ---------- */
@@ -505,42 +580,11 @@ section {
   color: var(--color-text-faint);
 }
 
-/* ---------- About ---------- */
-
-.about-section {
-  background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
-}
-
-.about-text p + p {
-  margin-top: 16px;
-}
-
-.about-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.about-card h3 {
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-
-.about-card p {
-  font-size: 15px;
-  color: var(--color-text-muted);
-}
-
 /* ---------- Experience ---------- */
+
+#experience {
+  border-top: 1px solid var(--color-border);
+}
 
 .job-list {
   border-bottom: 1px solid var(--color-border);
@@ -558,6 +602,10 @@ section {
   color: var(--color-text-faint);
   font-size: 14px;
   padding-top: 3px;
+}
+
+.job-body {
+  max-width: 760px;
 }
 
 .job-title {
@@ -867,7 +915,6 @@ section {
 
 @media (max-width: 900px) {
   .hero-grid,
-  .about-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -888,12 +935,11 @@ section {
   }
 
   .hero {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 40px;
+    padding-bottom: 0;
   }
 
   .site-check-grid,
-  .about-cards,
   .skills-list {
     grid-template-columns: 1fr;
   }
@@ -939,7 +985,6 @@ section {
 
   .contact-section,
   .bug-strip,
-  .about-section,
   .projects-section,
   .site-check-box,
   .project-card {

@@ -1,21 +1,21 @@
 // Builds the portfolio images from source files.
-// Run from demo/tools:  npm install  &&  npm run build:images
-// Paths are relative to the demo/ folder.
+// Run from tools/:  npm install  &&  npm run build:images
+// Paths are relative to the site root.
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import sharp from "sharp";
 
-const demoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
+const siteRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 
-const profilePhoto = join(demoRoot, "assets", "images", "profile-photo.jpg");
-const favicon = join(demoRoot, "favicon.svg");
+const profilePhoto = join(siteRoot, "assets", "images", "profile-photo.jpg");
+const favicon = join(siteRoot, "favicon.svg");
 
 async function buildProfilePhotos() {
   const image = sharp(profilePhoto).resize(192, 192, { fit: "cover" });
-  await image.clone().webp({ quality: 85 }).toFile(join(demoRoot, "assets", "images", "profile-photo-192.webp"));
-  await image.clone().jpeg({ quality: 85, mozjpeg: true }).toFile(join(demoRoot, "assets", "images", "profile-photo-192.jpg"));
+  await image.clone().webp({ quality: 85 }).toFile(join(siteRoot, "assets", "images", "profile-photo-192.webp"));
+  await image.clone().jpeg({ quality: 85, mozjpeg: true }).toFile(join(siteRoot, "assets", "images", "profile-photo-192.jpg"));
   console.log("profile-photo-192.webp and .jpg done");
 }
 
@@ -39,9 +39,9 @@ function buildOgCardSvg(photoBase64) {
 async function buildOgImage() {
   const photoBase64 = readFileSync(profilePhoto).toString("base64");
   const svg = buildOgCardSvg(photoBase64);
-  const ogCardPath = join(demoRoot, "assets", "og", "og-card.svg");
+  const ogCardPath = join(siteRoot, "assets", "og", "og-card.svg");
   writeFileSync(ogCardPath, svg);
-  await sharp(Buffer.from(svg), { density: 96 }).resize(1200, 630).png().toFile(join(demoRoot, "assets", "og", "og-image.png"));
+  await sharp(Buffer.from(svg), { density: 96 }).resize(1200, 630).png().toFile(join(siteRoot, "assets", "og", "og-image.png"));
   console.log("og-card.svg and og-image.png done");
 }
 
@@ -49,7 +49,7 @@ async function buildAppleTouchIcon() {
   await sharp(favicon, { density: 180 })
     .resize(180, 180)
     .png()
-    .toFile(join(demoRoot, "assets", "icons", "apple-touch-icon.png"));
+    .toFile(join(siteRoot, "assets", "icons", "apple-touch-icon.png"));
   console.log("apple-touch-icon.png done");
 }
 
