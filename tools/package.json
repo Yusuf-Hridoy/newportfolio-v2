@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-image-tools",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Builds the portfolio images (profile photos, og-image, apple-touch-icon). Not used by Netlify.",
+  "scripts": {
+    "build:images": "node build-images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

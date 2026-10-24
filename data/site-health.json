@@ -1,0 +1,22 @@
+{
+  "status": "sample",
+  "lastRun": "2026-10-24T03:00:00Z",
+  "commit": "4f2a91c",
+  "durationSeconds": 72,
+  "tests": { "passed": 41, "total": 41 },
+  "accessibilityProblems": 0,
+  "speedScore": 98,
+  "links": { "checked": 58, "broken": 0 },
+  "highlights": [
+    "home › loads in under 2s on slow 4G",
+    "contact › form sends and shows thanks",
+    "a11y › 0 problems, light and dark",
+    "links › 58 links checked, 0 broken"
+  ],
+  "reportUrl": "#",
+  "projects": {
+    "apitrek": { "status": "passing", "tests": 86, "lastRun": "2026-10-23T21:00:00Z", "reportUrl": "#" },
+    "qa-genius": { "status": "passing", "tests": 54, "lastRun": "2026-10-23T18:00:00Z", "reportUrl": "#" },
+    "playwright-project": { "status": "passing", "tests": 24, "lastRun": "2026-10-23T03:00:00Z", "reportUrl": "#" }
+  }
+}

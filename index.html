@@ -2,608 +2,458 @@
 <html lang="en" data-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Md Yusuf Ahmed — QA Automation Engineer (SDET) with 3+ years across SaaS, fintech, and telecom. Playwright automation in CI/CD, API and database validation, and LLM/chatbot quality testing.">
-    <meta name="theme-color" content="#0B0F19">
-    <title>Md Yusuf Ahmed | QA Automation Engineer (SDET)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Md Yusuf Ahmed | QA Automation Engineer (SDET)</title>
+  <meta name="description" content="Md Yusuf Ahmed is a QA Automation Engineer (SDET) in Dhaka, Bangladesh with 3+ years across SaaS, fintech and telecom. Playwright automation in CI/CD, API and database testing, and LLM chatbot quality testing.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Md Yusuf Ahmed">
+  <meta name="theme-color" content="#011A27">
+  <link rel="canonical" href="https://yusufahmedd.netlify.app/">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Md Yusuf Ahmed | QA Automation Engineer (SDET)">
-    <meta property="og:description" content="QA Automation Engineer (SDET) with 3+ years across SaaS, fintech, and telecom. Builds Playwright automation that runs in CI/CD, validates APIs and databases, and tests AI-powered products including LLM chatbots.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yusufahmedd.netlify.app/">
-    <meta property="og:image" content="https://yusufahmedd.netlify.app/photo/profile.jpg">
-    <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Md Yusuf Ahmed">
+  <meta property="og:url" content="https://yusufahmedd.netlify.app/">
+  <meta property="og:title" content="Md Yusuf Ahmed | QA Automation Engineer (SDET)">
+  <meta property="og:description" content="QA Automation Engineer (SDET): Playwright automation in CI/CD, API and database testing, and LLM chatbot quality testing.">
+  <meta property="og:image" content="https://yusufahmedd.netlify.app/assets/og/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Md Yusuf Ahmed, QA Automation Engineer (SDET)">
+  <meta property="og:locale" content="en_US">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Md Yusuf Ahmed | QA Automation Engineer (SDET)">
-    <meta name="twitter:description" content="QA Automation Engineer (SDET) — Playwright in CI/CD, API & database validation, and LLM chatbot quality testing.">
-    <meta name="twitter:image" content="https://yusufahmedd.netlify.app/photo/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Md Yusuf Ahmed | QA Automation Engineer (SDET)">
+  <meta name="twitter:description" content="Playwright in CI/CD, API and database testing, and LLM chatbot quality testing.">
+  <meta name="twitter:image" content="https://yusufahmedd.netlify.app/assets/og/og-image.png">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 
-    <!-- Apply saved / system theme before paint to avoid a flash -->
-    <script>
-        (function () {
-            document.documentElement.classList.add("js");
-            try {
-                var saved = localStorage.getItem("theme");
-                var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-                document.documentElement.setAttribute("data-theme", theme);
-            } catch (e) {}
-        })();
-    </script>
+  <!-- Apply saved / system theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var theme = saved || "dark"; // dark by default; the saved choice always wins
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css?v=1">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="yusuf.css">
-    <link rel="stylesheet" href="utility.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://yusufahmedd.netlify.app/#profilepage",
+        "url": "https://yusufahmedd.netlify.app/",
+        "name": "Md Yusuf Ahmed | QA Automation Engineer (SDET)",
+        "dateModified": "2026-10-24",
+        "mainEntity": { "@id": "https://yusufahmedd.netlify.app/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://yusufahmedd.netlify.app/#person",
+        "name": "Md Yusuf Ahmed",
+        "alternateName": "Yusuf Ahmed",
+        "jobTitle": "QA Automation Engineer (SDET)",
+        "description": "QA Automation Engineer (SDET) in Dhaka, Bangladesh with 3+ years across SaaS, fintech and telecom. Builds Playwright automation in CI/CD, validates APIs and databases, and tests LLM chatbots for accuracy and safe behavior.",
+        "url": "https://yusufahmedd.netlify.app/",
+        "image": "https://yusufahmedd.netlify.app/assets/images/profile-photo.jpg",
+        "email": "mailto:yusufahmed.sdet@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
+        "worksFor": { "@type": "Organization", "name": "SDS Manager", "url": "https://sdsmanager.com/" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "City University, Dhaka", "url": "https://www.cityuniversity.edu.bd/" },
+        "knowsAbout": ["Test automation", "Playwright", "Cypress", "Selenium", "Appium", "API testing", "Postman", "K6 performance testing", "LLM evaluation", "Chatbot testing", "CI/CD", "GitHub Actions", "Risk-based testing"],
+        "knowsLanguage": ["en", "bn"],
+        "sameAs": [
+          "https://www.linkedin.com/in/md-yusuf-ahmed/",
+          "https://github.com/Yusuf-Hridoy"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://yusufahmedd.netlify.app/#website",
+        "url": "https://yusufahmedd.netlify.app/",
+        "name": "Md Yusuf Ahmed",
+        "publisher": { "@id": "https://yusufahmedd.netlify.app/#person" }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
-    <a href="#main" class="skip-link">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Background decoration -->
-    <div class="bg-grid" aria-hidden="true"></div>
-    <div class="bg-glow" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">Yusuf Ahmed</a>
 
-    <!-- Navigation -->
-    <header class="site-header">
-        <nav class="nav container" aria-label="Primary">
-            <a href="#home" class="brand" aria-label="Md Yusuf Ahmed — home">
-                <span class="brand-mark">YA</span>
-                <span class="brand-name">Yusuf Ahmed</span>
-            </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#credentials" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+        </button>
+        <a class="button button-outline button-small" href="md-yusuf-ahmed-resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </header>
 
-            <div class="nav-actions">
-                <button class="icon-btn theme-toggle" type="button" aria-label="Toggle color theme">
-                    <i class="fas fa-moon" aria-hidden="true"></i>
-                </button>
-                <a href="Md_Yusuf_Ahmed.pdf" target="_blank" rel="noopener" class="btn btn-sm nav-cta">Resume</a>
-                <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-                    <i class="fas fa-bars" aria-hidden="true"></i>
-                </button>
-            </div>
-        </nav>
-    </header>
-
-    <main id="main">
-        <!-- Hero -->
-        <section class="hero" id="home">
-            <div class="container hero-grid">
-                <div class="hero-text">
-                    <span class="status-pill"><span class="status-dot"></span> Open to remote SDET &amp; AI Quality roles</span>
-                    <h1 class="hero-name">Md Yusuf Ahmed</h1>
-                    <p class="hero-role">QA Automation Engineer <span class="mono">(SDET)</span></p>
-                    <p class="hero-summary">
-                        3+ years across SaaS, fintech, and telecom. I build Playwright automation that runs in CI/CD,
-                        create internal tools that speed up test execution, validate APIs and databases for data integrity,
-                        and test AI-powered products — including LLM chatbots — for accuracy, hallucinations, and safe behavior.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="Md_Yusuf_Ahmed.pdf" target="_blank" rel="noopener" class="btn">
-                            <i class="fas fa-file-arrow-down" aria-hidden="true"></i> Download Resume
-                        </a>
-                        <a href="#contact" class="btn btn-ghost">
-                            <i class="fas fa-paper-plane" aria-hidden="true"></i> Get in touch
-                        </a>
-                    </div>
-                    <div class="hero-links">
-                        <a href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Yusuf-Hridoy" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="mailto:yusufahmed.sdet@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        <span class="hero-location"><i class="fas fa-location-dot" aria-hidden="true"></i> Dhaka, Bangladesh</span>
-                    </div>
-                </div>
-
-                <div class="hero-visual">
-                    <div class="profile-card">
-                        <img src="photo/profile.jpg" alt="Portrait of Md Yusuf Ahmed" width="96" height="96">
-                        <div>
-                            <p class="profile-card-name">Md Yusuf Ahmed</p>
-                            <p class="profile-card-role">Software QA Engineer @ SDS Manager</p>
-                        </div>
-                    </div>
-
-                    <div class="terminal" role="img" aria-label="Example Playwright test run with all tests passing">
-                        <div class="terminal-bar">
-                            <span></span><span></span><span></span>
-                            <p class="terminal-title">~/swag-labs-e2e</p>
-                        </div>
-                        <pre class="terminal-body"><code><span class="t-line"><span class="t-prompt">$</span> npx playwright test</span>
-<span class="t-line t-dim">Running 24 tests using 4 workers</span>
-<span class="t-line"><span class="t-pass">✓</span> login › valid user can sign in</span>
-<span class="t-line"><span class="t-pass">✓</span> cart › add item updates badge</span>
-<span class="t-line"><span class="t-pass">✓</span> checkout › order completes</span>
-<span class="t-line"><span class="t-pass">✓</span> api › GET /users returns 200</span>
-<span class="t-line t-summary"><span class="t-pass">24 passed</span> <span class="t-dim">(48s)</span></span><span class="t-line"><span class="t-prompt">$</span> <span class="t-cursor"></span></span></code></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <dl class="stats">
-                    <div class="stat">
-                        <dt>Years in QA</dt>
-                        <dd>3+</dd>
-                    </div>
-                    <div class="stat">
-                        <dt>Industries · SaaS, fintech, telecom</dt>
-                        <dd>3</dd>
-                    </div>
-                    <div class="stat">
-                        <dt>Frameworks · Playwright, Cypress, Selenium, Appium</dt>
-                        <dd>4</dd>
-                    </div>
-                    <div class="stat">
-                        <dt>LLM &amp; chatbot quality testing</dt>
-                        <dd>AI-first</dd>
-                    </div>
-                </dl>
-            </div>
-        </section>
-
-        <!-- About -->
-        <section class="section" id="about">
-            <div class="container">
-                <header class="section-head reveal">
-                    <p class="eyebrow">01 · About</p>
-                    <h2 class="section-title">Quality engineering, <span class="gradient-text">AI-first</span></h2>
-                    <p class="section-lead">
-                        I work AI-first — using Claude Code and coding agents to build and maintain test suites — and I own
-                        selected features end to end, from requirements and design through build, testing, and release.
-                    </p>
-                </header>
-
-                <div class="focus-grid">
-                    <article class="card focus-card reveal">
-                        <div class="focus-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
-                        <h3>Test automation</h3>
-                        <p>Playwright suites with Page Object Model for E2E and cross-browser coverage, wired into CI so smoke tests run on every build.</p>
-                    </article>
-                    <article class="card focus-card reveal">
-                        <div class="focus-icon"><i class="fas fa-database" aria-hidden="true"></i></div>
-                        <h3>API &amp; data integrity</h3>
-                        <p>REST API testing in Postman and Newman, backed by PostgreSQL checks that what the UI shows is what the database holds.</p>
-                    </article>
-                    <article class="card focus-card reveal">
-                        <div class="focus-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
-                        <h3>AI &amp; LLM quality</h3>
-                        <p>Evaluating chatbots and AI features for accuracy, hallucinations, off-topic or unsafe answers, and consistency across prompts.</p>
-                    </article>
-                    <article class="card focus-card reveal">
-                        <div class="focus-icon"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></div>
-                        <h3>QA tooling</h3>
-                        <p>Internal tools and Claude skills that automate test case management, bug reporting, standups, and QA research.</p>
-                    </article>
-                </div>
-
-                <div class="about-row">
-                    <div class="card info-card reveal">
-                        <h3 class="card-title">At a glance</h3>
-                        <dl class="info-list">
-                            <div><dt>Role</dt><dd>QA Automation Engineer (SDET)</dd></div>
-                            <div><dt>Currently</dt><dd>Software QA Engineer, SDS Manager</dd></div>
-                            <div><dt>Education</dt><dd>BSc in CSE, City University</dd></div>
-                            <div><dt>Based in</dt><dd>Dhaka, Bangladesh <img src="Flag icon/bangladesh.png" class="country-flag" alt="" width="20" height="13"></dd></div>
-                            <div><dt>Languages</dt><dd>Bangla &amp; English</dd></div>
-                        </dl>
-                    </div>
-                    <div class="card now-card reveal">
-                        <h3 class="card-title"><span class="status-dot" aria-hidden="true"></span> Right now</h3>
-                        <ul class="now-list">
-                            <li><i class="fas fa-vial-circle-check" aria-hidden="true"></i> Running Playwright smoke tests in CI on every build at SDS Manager</li>
-                            <li><i class="fas fa-comments" aria-hidden="true"></i> Testing an LLM chatbot for accuracy, hallucinations, and safe behavior</li>
-                            <li><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> Building Claude skills that automate bug reporting, standups, and QA research</li>
-                            <li><i class="fas fa-user-group" aria-hidden="true"></i> Mentoring two junior QA engineers in test design and automation</li>
-                        </ul>
-                        <a href="https://github.com/Yusuf-Hridoy" target="_blank" rel="noopener" class="text-link">See my work on GitHub <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience -->
-        <section class="section" id="experience">
-            <div class="container">
-                <header class="section-head reveal">
-                    <p class="eyebrow">02 · Experience</p>
-                    <h2 class="section-title">Where I've <span class="gradient-text">shipped quality</span></h2>
-                </header>
-
-                <ol class="timeline">
-                    <li class="timeline-item reveal">
-                        <div class="timeline-marker" aria-hidden="true"></div>
-                        <article class="card job">
-                            <header class="job-head">
-                                <div>
-                                    <h3 class="job-title">Software QA Engineer</h3>
-                                    <p class="job-company">
-                                        <a href="https://sdsmanager.com/us/sds-management/" target="_blank" rel="noopener">SDS Manager <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                                    </p>
-                                </div>
-                                <span class="job-date">Aug 2025 – Present</span>
-                            </header>
-                            <p class="job-meta">Dhaka, Bangladesh · B2B SaaS platform for chemical safety compliance</p>
-                            <ul class="job-points">
-                                <li>Built and maintain the Playwright + JavaScript automation suite (POM) for E2E and cross-browser testing; its smoke tests run automatically in the CI pipeline on every build.</li>
-                                <li>Tested Safety Data Sheet (SDS) authoring and chemical management workflows, catching compliance-critical defects across 7 international regulations through API (Postman) and database (PostgreSQL) validation.</li>
-                                <li>Own selected features end to end in a product-owner role: define requirements and design, then drive them through build, testing, and release.</li>
-                                <li>Tested AI-powered product features, including an LLM chatbot, for response accuracy, hallucinations, off-topic or unsafe answers, and consistency across repeated prompts.</li>
-                                <li>Built an internal test case management tool and Claude skills that automate bug reporting, standups, and QA research.</li>
-                                <li>Diagnosed CI-only test failures, including configuration drift between local and pipeline runs and UI timing races, and stabilized pipeline results.</li>
-                                <li>Mentor two junior QA engineers in test design and automation.</li>
-                            </ul>
-                            <ul class="tags" aria-label="Tools used">
-                                <li>Playwright</li><li>JavaScript</li><li>GitHub Actions</li><li>Postman</li><li>PostgreSQL</li><li>LLM testing</li><li>Claude Code</li><li>ClickUp</li>
-                            </ul>
-                        </article>
-                    </li>
-
-                    <li class="timeline-item reveal">
-                        <div class="timeline-marker" aria-hidden="true"></div>
-                        <article class="card job">
-                            <header class="job-head">
-                                <div>
-                                    <h3 class="job-title">Product Acceptance Analyst</h3>
-                                    <p class="job-company">
-                                        <a href="https://selisegroup.com/" target="_blank" rel="noopener">SELISE Digital Platforms <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                                    </p>
-                                </div>
-                                <span class="job-date">Oct 2024 – Jul 2025</span>
-                            </header>
-                            <p class="job-meta">Dhaka, Bangladesh · Fintech and microfinance platforms</p>
-                            <ul class="job-points">
-                                <li>Initiated the team's Cypress automation framework with a reusable Page Object Model (POM) architecture.</li>
-                                <li>Tested fintech and microfinance platform features end to end across browsers, executing 100+ test cases per release in functional, regression, and UAT scope.</li>
-                                <li>Validated 50+ REST API endpoints in Postman across microfinance transaction flows, checking business logic and data integrity.</li>
-                                <li>Streamlined defect reporting in Azure Boards, shortening developer turnaround on critical bugs.</li>
-                                <li>Overhauled test documentation practices, improving release traceability across the team.</li>
-                            </ul>
-                            <ul class="tags" aria-label="Tools used">
-                                <li>Cypress</li><li>POM</li><li>Postman</li><li>Azure Boards</li><li>UAT</li>
-                            </ul>
-                        </article>
-                    </li>
-
-                    <li class="timeline-item reveal">
-                        <div class="timeline-marker" aria-hidden="true"></div>
-                        <article class="card job">
-                            <header class="job-head">
-                                <div>
-                                    <h3 class="job-title">Software QA Engineer <span class="job-type">Contract</span></h3>
-                                    <p class="job-company">
-                                        <a href="https://www.banglalink.net/en" target="_blank" rel="noopener">Banglalink <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                                        <span class="job-via">via Response Ltd</span>
-                                    </p>
-                                </div>
-                                <span class="job-date">May 2023 – Sep 2024</span>
-                            </header>
-                            <p class="job-meta">Dhaka, Bangladesh · One of Bangladesh's largest telecom operators</p>
-                            <ul class="job-points">
-                                <li>Tested the company's self-care mobile app (Android and iOS), website, and e-commerce store across 10+ functional modules.</li>
-                                <li>Validated a production AI chatbot's responses against expected intents and behaviors: hands-on LLM quality testing on a telecom product serving millions of users.</li>
-                                <li>Executed full regression, sanity, and UAT suites each release cycle and managed the defect lifecycle in JIRA with developers.</li>
-                            </ul>
-                            <ul class="tags" aria-label="Tools used">
-                                <li>Mobile (Android/iOS)</li><li>Chatbot testing</li><li>Regression</li><li>JIRA</li>
-                            </ul>
-                        </article>
-                    </li>
-
-                    <li class="timeline-item reveal">
-                        <div class="timeline-marker" aria-hidden="true"></div>
-                        <article class="card job">
-                            <header class="job-head">
-                                <div>
-                                    <h3 class="job-title">Operation ERP System Intern</h3>
-                                    <p class="job-company">
-                                        <a href="https://www.dewhirst.com/location/bangladesh-manufacturing-and-laundry/" target="_blank" rel="noopener">Dewhirst Shanta <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                                    </p>
-                                </div>
-                                <span class="job-date">Jun 2022 – Sep 2022</span>
-                            </header>
-                            <p class="job-meta">Dhaka, Bangladesh</p>
-                            <ul class="job-points">
-                                <li>Supported functional testing of ERP modules, identifying and reporting system defects.</li>
-                            </ul>
-                        </article>
-                    </li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section class="section" id="projects">
-            <div class="container">
-                <header class="section-head reveal">
-                    <p class="eyebrow">03 · Projects</p>
-                    <h2 class="section-title">Things I've <span class="gradient-text">built</span></h2>
-                </header>
-
-                <div class="projects-grid">
-                    <article class="card project reveal">
-                        <div class="project-top">
-                            <div class="project-icon"><i class="fas fa-route" aria-hidden="true"></i></div>
-                            <span class="badge">Live</span>
-                        </div>
-                        <h3>APITrek</h3>
-                        <p>Live REST API testing workspace for structured API tests, with an endpoint coverage scorecard.</p>
-                        <ul class="tags" aria-label="Tech stack">
-                            <li>Python</li><li>FastAPI</li><li>REST</li><li>pytest</li><li>Postman</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://apitrek.onrender.com/" target="_blank" rel="noopener" class="link-btn"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
-                            <a href="https://github.com/Yusuf-Hridoy/apitrek" target="_blank" rel="noopener" class="link-btn"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
-                        </div>
-                    </article>
-
-                    <article class="card project reveal">
-                        <div class="project-top">
-                            <div class="project-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
-                            <span class="badge">AI · Live</span>
-                        </div>
-                        <h3>QA-Genius</h3>
-                        <p>AI QA workspace turning user stories into test cases, bug reports, and test scripts.</p>
-                        <ul class="tags" aria-label="Tech stack">
-                            <li>Python</li><li>LangChain</li><li>Gemini</li><li>Streamlit</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://testing-genius-suite.streamlit.app/" target="_blank" rel="noopener" class="link-btn"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
-                            <a href="https://github.com/Yusuf-Hridoy/QA-Genius" target="_blank" rel="noopener" class="link-btn"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
-                        </div>
-                    </article>
-
-                    <article class="card project reveal">
-                        <div class="project-top">
-                            <div class="project-icon"><i class="fas fa-masks-theater" aria-hidden="true"></i></div>
-                            <span class="badge badge-muted">CI on every push</span>
-                        </div>
-                        <h3>Playwright Web Automation</h3>
-                        <p>Playwright + JavaScript UI test suite with Page Object Model and GitHub Actions CI on every push.</p>
-                        <ul class="tags" aria-label="Tech stack">
-                            <li>Playwright</li><li>JavaScript</li><li>POM</li><li>GitHub Actions</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/Yusuf-Hridoy/Playwright-Project" target="_blank" rel="noopener" class="link-btn"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="more-projects reveal">
-                    <h3 class="card-title">More on GitHub</h3>
-                    <ul class="repo-list">
-                        <li>
-                            <a href="https://github.com/Yusuf-Hridoy/Cypress-Web-Automation" target="_blank" rel="noopener">
-                                <span class="repo-name">Cypress-Web-Automation</span>
-                                <span class="repo-desc">HR module E2E with Cypress + POM</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Yusuf-Hridoy/K6-Performance-Testing" target="_blank" rel="noopener">
-                                <span class="repo-name">K6-Performance-Testing</span>
-                                <span class="repo-desc">Load, stress, spike &amp; soak tests with thresholds</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Yusuf-Hridoy/postman-advanced-api-project" target="_blank" rel="noopener">
-                                <span class="repo-name">postman-advanced-api-project</span>
-                                <span class="repo-desc">Postman + Newman: auth, chaining, schema checks, CI</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Yusuf-Hridoy/App-Automation-Mobile" target="_blank" rel="noopener">
-                                <span class="repo-name">App-Automation-Mobile</span>
-                                <span class="repo-desc">Android automation with Appium</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Yusuf-Hridoy/Web-Automation-Monarch-Mart" target="_blank" rel="noopener">
-                                <span class="repo-name">Web-Automation-Monarch-Mart</span>
-                                <span class="repo-desc">E-commerce testing with Selenium + POM</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section class="section" id="skills">
-            <div class="container">
-                <header class="section-head reveal">
-                    <p class="eyebrow">04 · Skills</p>
-                    <h2 class="section-title">Technical <span class="gradient-text">toolkit</span></h2>
-                </header>
-
-                <div class="skills-grid">
-                    <div class="card skill-group reveal">
-                        <h3><i class="fas fa-robot" aria-hidden="true"></i> Test Automation</h3>
-                        <ul class="chips">
-                            <li class="chip-strong">Playwright</li><li>Cypress</li><li>Selenium</li><li>Appium</li><li>Page Object Model</li>
-                        </ul>
-                    </div>
-                    <div class="card skill-group reveal">
-                        <h3><i class="fas fa-code" aria-hidden="true"></i> Languages</h3>
-                        <ul class="chips">
-                            <li class="chip-strong">JavaScript</li><li>TypeScript</li><li>Python</li><li>SQL</li>
-                        </ul>
-                    </div>
-                    <div class="card skill-group reveal">
-                        <h3><i class="fas fa-plug" aria-hidden="true"></i> API &amp; Performance</h3>
-                        <ul class="chips">
-                            <li class="chip-strong">REST API Testing</li><li>Postman</li><li>Newman</li><li>K6</li><li>JMeter</li>
-                        </ul>
-                    </div>
-                    <div class="card skill-group reveal">
-                        <h3><i class="fas fa-brain" aria-hidden="true"></i> AI &amp; LLM Quality</h3>
-                        <ul class="chips">
-                            <li class="chip-strong">LLM Evaluation</li><li>Chatbot Testing</li><li>Prompt Engineering</li><li>Claude Code</li><li>LangChain</li>
-                        </ul>
-                    </div>
-                    <div class="card skill-group reveal">
-                        <h3><i class="fas fa-code-branch" aria-hidden="true"></i> CI/CD &amp; Tools</h3>
-                        <ul class="chips">
-                            <li class="chip-strong">GitHub Actions</li><li>Git</li><li>GitHub</li><li>PostgreSQL</li><li>MySQL</li><li>JIRA</li><li>ClickUp</li><li>Azure Boards</li>
-                        </ul>
-                    </div>
-                    <div class="card skill-group reveal">
-                        <h3><i class="fas fa-diagram-project" aria-hidden="true"></i> Methods</h3>
-                        <ul class="chips">
-                            <li>Test Planning</li><li>Test Strategy</li><li>Risk-based Testing</li><li>Shift-left</li><li>Regression</li><li>Smoke</li><li>UAT</li><li>SDLC / STLC</li><li>Agile / Scrum</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education & Certifications -->
-        <section class="section" id="credentials">
-            <div class="container">
-                <header class="section-head reveal">
-                    <p class="eyebrow">05 · Education &amp; Certifications</p>
-                    <h2 class="section-title">Learning <span class="gradient-text">never stops</span></h2>
-                </header>
-
-                <div class="credentials-grid">
-                    <article class="card credential reveal">
-                        <div class="credential-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
-                        <div>
-                            <p class="credential-kind">Education</p>
-                            <h3>BSc in Computer Science and Engineering</h3>
-                            <p class="credential-issuer">City University, Dhaka</p>
-                            <p class="credential-date">Apr 2018 – May 2022</p>
-                            <a href="https://www.cityuniversity.edu.bd/" target="_blank" rel="noopener" class="text-link">Visit institution <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="card credential reveal">
-                        <div class="credential-icon"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
-                        <div>
-                            <p class="credential-kind">Certification</p>
-                            <h3>Anthropic Model Context Protocol (MCP)</h3>
-                            <p class="credential-issuer">Anthropic</p>
-                            <p class="credential-date">Issued 2025</p>
-                            <a href="https://verify.skilljar.com/c/z4tepqoezjm3" target="_blank" rel="noopener" class="text-link">View certificate <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="card credential reveal">
-                        <div class="credential-icon credential-logo"><img src="Certificate/microsoft_logo.jpg" alt="" width="48" height="48"></div>
-                        <div>
-                            <p class="credential-kind">Certification</p>
-                            <h3>Career Essentials in Generative AI</h3>
-                            <p class="credential-issuer">Microsoft &amp; LinkedIn Learning</p>
-                            <p class="credential-date">Issued Jul 2024</p>
-                            <a href="https://www.linkedin.com/learning/certificates/df563d9b37ba9d8db9a34430b234e7bb31881f621e4339a20adb6954388c6538" target="_blank" rel="noopener" class="text-link">View certificate <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section class="section" id="contact">
-            <div class="container">
-                <header class="section-head reveal">
-                    <p class="eyebrow">06 · Contact</p>
-                    <h2 class="section-title">Let's <span class="gradient-text">talk quality</span></h2>
-                    <p class="section-lead">Open to remote SDET and AI Quality Engineer roles. The fastest way to reach me is email.</p>
-                </header>
-
-                <div class="contact-grid">
-                    <div class="card contact-info reveal">
-                        <a class="contact-item" href="mailto:yusufahmed.sdet@gmail.com">
-                            <span class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
-                            <span><span class="contact-label">Email</span><span class="contact-value">yusufahmed.sdet@gmail.com</span></span>
-                        </a>
-                        <a class="contact-item" href="tel:+8801793527440">
-                            <span class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
-                            <span><span class="contact-label">Phone</span><span class="contact-value">+880 1793 527440</span></span>
-                        </a>
-                        <a class="contact-item" href="https://wa.me/8801793527440" target="_blank" rel="noopener">
-                            <span class="contact-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span>
-                            <span><span class="contact-label">WhatsApp</span><span class="contact-value">+880 1793 527440</span></span>
-                        </a>
-                        <a class="contact-item" href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank" rel="noopener">
-                            <span class="contact-icon"><i class="fab fa-linkedin-in" aria-hidden="true"></i></span>
-                            <span><span class="contact-label">LinkedIn</span><span class="contact-value">in/md-yusuf-ahmed</span></span>
-                        </a>
-                        <a class="contact-item" href="https://github.com/Yusuf-Hridoy" target="_blank" rel="noopener">
-                            <span class="contact-icon"><i class="fab fa-github" aria-hidden="true"></i></span>
-                            <span><span class="contact-label">GitHub</span><span class="contact-value">Yusuf-Hridoy</span></span>
-                        </a>
-                        <div class="contact-item">
-                            <span class="contact-icon"><i class="fas fa-location-dot" aria-hidden="true"></i></span>
-                            <span><span class="contact-label">Location</span><span class="contact-value">Dhaka, Bangladesh</span></span>
-                        </div>
-                    </div>
-
-                    <form class="card contact-form reveal" action="https://formspree.io/f/mkoageyl" method="POST">
-                        <h3 class="card-title">Send a message</h3>
-                        <div class="form-row">
-                            <label class="field">
-                                <span>Name</span>
-                                <input type="text" name="name" autocomplete="name" required>
-                            </label>
-                            <label class="field">
-                                <span>Email</span>
-                                <input type="email" name="email" autocomplete="email" required>
-                            </label>
-                        </div>
-                        <label class="field">
-                            <span>Subject</span>
-                            <input type="text" name="subject">
-                        </label>
-                        <label class="field">
-                            <span>Message</span>
-                            <textarea name="message" rows="5" required></textarea>
-                        </label>
-                        <button type="submit" class="btn">Send message <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
-                        <p class="form-status" role="status" aria-live="polite"></p>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>&copy; <span id="year"></span> Md Yusuf Ahmed · QA Automation Engineer (SDET)</p>
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/Yusuf-Hridoy" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:yusufahmed.sdet@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="test-badge" id="hero-badge" hidden>
+            <span id="hero-badge-text">This website passed its own tests.</span>
+            <a href="#site-check">What does this mean?</a>
+          </p>
+          <h1 class="hero-name">Md Yusuf Ahmed</h1>
+          <p class="hero-role">QA Automation Engineer (SDET)</p>
+          <p class="hero-summary">3+ years testing SaaS, fintech and telecom products. I build Playwright automation that runs in CI, check APIs and databases for data integrity, and test LLM chatbots for wrong or unsafe answers.</p>
+          <div class="hero-buttons">
+            <a class="button button-primary" href="md-yusuf-ahmed-resume.pdf" target="_blank" rel="noopener">Download resume</a>
+            <a class="button button-outline" href="#contact">Email me</a>
+          </div>
+          <p class="hero-links">Dhaka, Bangladesh · Open to remote SDET and AI Quality roles · <a href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/Yusuf-Hridoy" target="_blank" rel="noopener">GitHub</a></p>
         </div>
-    </footer>
 
-    <!-- Scroll top button -->
-    <a href="#home" class="scroll-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
-    </a>
+        <div class="hero-visual">
+          <div class="profile-row">
+            <picture>
+              <source srcset="assets/images/profile-photo-192.webp" type="image/webp">
+              <img src="assets/images/profile-photo-192.jpg" alt="Md Yusuf Ahmed" width="64" height="64">
+            </picture>
+            <div>
+              <p class="profile-name">Md Yusuf Ahmed</p>
+              <p class="profile-role">Software QA Engineer at SDS Manager</p>
+            </div>
+          </div>
 
-    <script src="driver.js"></script>
+          <div class="terminal" id="terminal-box" role="group" aria-label="Last automated test run of this website" hidden>
+            <p class="terminal-muted-text">~/portfolio · nightly run · commit <span id="terminal-commit">…</span></p>
+            <p><span class="terminal-muted-text">$</span> npx playwright test</p>
+            <p class="terminal-muted-text">Running <span id="terminal-total">…</span> tests on 3 browsers + mobile</p>
+            <p id="terminal-highlights"></p>
+            <p><span class="terminal-ok-text" id="terminal-passed">…</span> <span class="terminal-muted-text" id="terminal-duration"></span></p>
+            <p><a id="terminal-report" href="#" target="_blank" rel="noopener">Open the full test report</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Site check -->
+    <section id="site-check" hidden>
+      <div class="container">
+        <div class="site-check-box">
+          <div class="site-check-top">
+            <h2>This website tests itself <span class="badge" id="sample-badge" hidden>Sample numbers</span></h2>
+            <p>Every night, an automated test suite I wrote checks this site, the same way I test products at work. These numbers are about this website, from the last run.</p>
+            <p class="site-check-links">Last run <span id="site-check-time">…</span><span id="site-check-report-wrap"> · <a id="site-check-report" href="#" target="_blank" rel="noopener">Full report</a></span><span> · <a href="https://github.com/Yusuf-Hridoy/newportfolio-v2" target="_blank" rel="noopener">Test code</a></span></p>
+          </div>
+          <div class="site-check-grid">
+            <div class="check-cell">
+              <p class="check-number" id="check-passed">…</p>
+              <p class="check-label">tests passed</p>
+              <p class="check-note">Pages, menu, contact form and phone layout</p>
+            </div>
+            <div class="check-cell">
+              <p class="check-number" id="check-a11y">…</p>
+              <p class="check-label">accessibility problems</p>
+              <p class="check-note">Checked for keyboard and screen-reader users</p>
+            </div>
+            <div class="check-cell">
+              <p class="check-number" id="check-speed">…</p>
+              <p class="check-label">speed score</p>
+              <p class="check-note">Google Lighthouse, tested on a phone</p>
+            </div>
+            <div class="check-cell">
+              <p class="check-number" id="check-links">…</p>
+              <p class="check-label">broken links</p>
+              <p class="check-note" id="check-links-note">All links on this site</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2 class="section-title">About</h2>
+          <p>Md Yusuf Ahmed is a QA Automation Engineer (SDET) based in Dhaka, Bangladesh, with 3+ years of testing SaaS, fintech and telecom products.</p>
+          <p>I use Claude Code and coding agents to build and maintain test suites, and I own selected features end to end, from requirements to release.</p>
+        </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <h3>Test automation</h3>
+            <p>Playwright suites with Page Object Model, run in CI on every build.</p>
+          </div>
+          <div class="about-card">
+            <h3>API and data</h3>
+            <p>Postman and Newman, backed by PostgreSQL checks.</p>
+          </div>
+          <div class="about-card">
+            <h3>AI and LLM quality</h3>
+            <p>Chatbots tested for wrong, off-topic or unsafe answers.</p>
+          </div>
+          <div class="about-card">
+            <h3>QA tooling</h3>
+            <p>Tools that automate test cases, bug reports and standups.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <ol class="job-list">
+          <li class="job-row">
+            <p class="job-dates">Aug 2025 – now</p>
+            <div>
+              <h3 class="job-title">Software QA Engineer</h3>
+              <p class="job-company">SDS Manager · B2B SaaS platform for chemical safety compliance</p>
+              <ul class="job-points">
+                <li>Built and maintain the Playwright + JavaScript automation suite (POM) for E2E and cross-browser testing; its smoke tests run automatically in the CI pipeline on every build.</li>
+                <li>Tested Safety Data Sheet (SDS) authoring and chemical management workflows, catching compliance-critical defects across 7 international regulations through API (Postman) and database (PostgreSQL) validation.</li>
+                <li>Own selected features end to end in a product-owner role: define requirements and design, then drive them through build, testing, and release.</li>
+                <li>Tested AI-powered product features, including an LLM chatbot, for response accuracy, hallucinations, off-topic or unsafe answers, and consistency across repeated prompts.</li>
+                <li>Built an internal test case management tool and Claude skills that automate bug reporting, standups, and QA research.</li>
+                <li>Diagnosed CI-only test failures, including configuration drift between local and pipeline runs and UI timing races, and stabilized pipeline results.</li>
+                <li>Mentor two junior QA engineers in test design and automation.</li>
+              </ul>
+              <p class="job-tools">Playwright · JavaScript · GitHub Actions · Postman · PostgreSQL · LLM testing · Claude Code · ClickUp</p>
+            </div>
+          </li>
+
+          <li class="job-row">
+            <p class="job-dates">Oct 2024 – Jul 2025</p>
+            <div>
+              <h3 class="job-title">Product Acceptance Analyst</h3>
+              <p class="job-company">SELISE Digital Platforms · Fintech and microfinance platforms</p>
+              <ul class="job-points">
+                <li>Initiated the team's Cypress automation framework with a reusable Page Object Model (POM) architecture.</li>
+                <li>Tested fintech and microfinance platform features end to end across browsers, executing 100+ test cases per release in functional, regression, and UAT scope.</li>
+                <li>Validated 50+ REST API endpoints in Postman across microfinance transaction flows, checking business logic and data integrity.</li>
+                <li>Streamlined defect reporting in Azure Boards, shortening developer turnaround on critical bugs.</li>
+                <li>Overhauled test documentation practices, improving release traceability across the team.</li>
+              </ul>
+              <p class="job-tools">Cypress · POM · Postman · Azure Boards · UAT</p>
+            </div>
+          </li>
+
+          <li class="job-row">
+            <p class="job-dates">May 2023 – Sep 2024</p>
+            <div>
+              <h3 class="job-title">Software QA Engineer, contract</h3>
+              <p class="job-company">Banglalink via Response Ltd · One of Bangladesh's largest telecom operators</p>
+              <ul class="job-points">
+                <li>Tested the company's self-care mobile app (Android and iOS), website, and e-commerce store across 10+ functional modules.</li>
+                <li>Validated a production AI chatbot's responses against expected intents and behaviors: hands-on LLM quality testing on a telecom product serving millions of users.</li>
+                <li>Executed full regression, sanity, and UAT suites each release cycle and managed the defect lifecycle in JIRA with developers.</li>
+              </ul>
+              <p class="job-tools">Mobile (Android/iOS) · Chatbot testing · Regression · JIRA</p>
+            </div>
+          </li>
+
+          <li class="job-row">
+            <p class="job-dates">Jun 2022 – Sep 2022</p>
+            <div>
+              <h3 class="job-title">Operation ERP System Intern</h3>
+              <p class="job-company">Dewhirst Shanta</p>
+              <ul class="job-points">
+                <li>Supported functional testing of ERP modules, identifying and reporting system defects.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="projects-lead" id="projects-lead" hidden>Every project shows its real test result from its last run.</p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-top">
+              <h3 class="project-title">APITrek</h3>
+              <span class="badge project-badge" data-project="apitrek" hidden></span>
+            </div>
+            <p class="project-text">A live REST API testing workspace with an endpoint coverage scorecard.</p>
+            <p class="project-stack">Python · FastAPI · pytest</p>
+            <p class="project-tests" data-project="apitrek" hidden></p>
+            <div class="project-links">
+              <a href="https://apitrek.onrender.com/" target="_blank" rel="noopener">Live demo</a>
+              <a href="https://github.com/Yusuf-Hridoy/apitrek" target="_blank" rel="noopener">Code</a>
+              <a href="#" data-project-report="apitrek" target="_blank" rel="noopener" hidden>Test report</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <h3 class="project-title">QA-Genius</h3>
+              <span class="badge project-badge" data-project="qa-genius" hidden></span>
+            </div>
+            <p class="project-text">An AI QA workspace that checks user stories, writes test cases, finds risks and gives a ship verdict.</p>
+            <p class="project-stack">Python · FastAPI · Vercel</p>
+            <p class="project-tests" data-project="qa-genius" hidden></p>
+            <div class="project-links">
+              <a href="https://qa-genius-ashy.vercel.app" target="_blank" rel="noopener">Live demo</a>
+              <a href="https://github.com/Yusuf-Hridoy/QA-Genius" target="_blank" rel="noopener">Code</a>
+              <a href="#" data-project-report="qa-genius" target="_blank" rel="noopener" hidden>Test report</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <h3 class="project-title">Playwright web automation</h3>
+              <span class="badge project-badge" data-project="playwright-project" hidden></span>
+            </div>
+            <p class="project-text">A Playwright + JavaScript UI suite with Page Object Model and CI on every push.</p>
+            <p class="project-stack">Playwright · JavaScript · GitHub Actions</p>
+            <p class="project-tests" data-project="playwright-project" hidden></p>
+            <div class="project-links">
+              <a href="https://github.com/Yusuf-Hridoy/Playwright-Project" target="_blank" rel="noopener">Code</a>
+              <a href="#" data-project-report="playwright-project" target="_blank" rel="noopener" hidden>Test report</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="more-github">More on GitHub: <a href="https://github.com/Yusuf-Hridoy/Cypress-Web-Automation" target="_blank" rel="noopener">Cypress</a> · <a href="https://github.com/Yusuf-Hridoy/K6-Performance-Testing" target="_blank" rel="noopener">K6 performance</a> · <a href="https://github.com/Yusuf-Hridoy/postman-advanced-api-project" target="_blank" rel="noopener">Postman + Newman</a> · <a href="https://github.com/Yusuf-Hridoy/App-Automation-Mobile" target="_blank" rel="noopener">Appium mobile</a></p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+
+        <ul class="skills-list">
+          <li class="skill-item">
+            <p class="skill-label">Test automation</p>
+            <p class="skill-line">Playwright, Cypress, Selenium, Appium, Page Object Model</p>
+          </li>
+          <li class="skill-item">
+            <p class="skill-label">Languages</p>
+            <p class="skill-line">JavaScript, TypeScript, Python, SQL</p>
+          </li>
+          <li class="skill-item">
+            <p class="skill-label">API and performance</p>
+            <p class="skill-line">Postman, Newman, K6, JMeter</p>
+          </li>
+          <li class="skill-item">
+            <p class="skill-label">AI and LLM quality</p>
+            <p class="skill-line">LLM evaluation, chatbot testing, Claude Code, LangChain</p>
+          </li>
+          <li class="skill-item">
+            <p class="skill-label">CI/CD and tools</p>
+            <p class="skill-line">GitHub Actions, Git, PostgreSQL, JIRA, ClickUp</p>
+          </li>
+          <li class="skill-item">
+            <p class="skill-label">Methods</p>
+            <p class="skill-line">Risk-based testing, shift-left, regression, UAT</p>
+          </li>
+        </ul>
+
+        <h2 class="credentials-title">Education and certificates</h2>
+        <div class="credential-row">
+          <p>BSc in Computer Science and Engineering, City University</p>
+          <p class="credential-date">2018 – 2022</p>
+        </div>
+        <div class="credential-row">
+          <p>Model Context Protocol, Anthropic · <a href="https://verify.skilljar.com/c/z4tepqoezjm3" target="_blank" rel="noopener">View</a></p>
+          <p class="credential-date">2025</p>
+        </div>
+        <div class="credential-row">
+          <p>Career Essentials in Generative AI, Microsoft and LinkedIn · <a href="https://www.linkedin.com/learning/certificates/df563d9b37ba9d8db9a34430b234e7bb31881f621e4339a20adb6954388c6538" target="_blank" rel="noopener">View</a></p>
+          <p class="credential-date">2024</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">Contact</h2>
+          <p class="contact-intro">Open to remote SDET and AI Quality Engineer roles. Email is the fastest way to reach me.</p>
+          <a class="contact-email" href="mailto:yusufahmed.sdet@gmail.com">yusufahmed.sdet@gmail.com</a>
+          <p class="contact-social"><a href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/Yusuf-Hridoy" target="_blank" rel="noopener">GitHub</a></p>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" action="https://formspree.io/f/mkoageyl" method="POST">
+            <div class="field">
+              <label class="field-label" for="contact-name">Name</label>
+              <input id="contact-name" type="text" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label class="field-label" for="contact-email">Email</label>
+              <input id="contact-email" type="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label class="field-label" for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="button button-primary">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bug report strip -->
+  <aside class="bug-strip" aria-label="Report a bug">
+    <div class="container">
+      <h2>Found a bug on this site?</h2>
+      <p>Tell me. Your browser and screen size are added to the report for you.</p>
+      <p class="bug-env" id="bug-env">…</p>
+      <button type="button" class="button button-outline" id="bug-button">Report a bug</button>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Md Yusuf Ahmed</p>
+      <p class="footer-test" id="footer-test" hidden>Tested every night by GitHub Actions · last run <span id="footer-test-line"></span><span id="footer-test-report-wrap"> · <a id="footer-test-report" href="#" target="_blank" rel="noopener">report</a></span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=1"></script>
 </body>
 
 </html>

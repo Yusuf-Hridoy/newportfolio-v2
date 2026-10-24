@@ -1,0 +1,20 @@
+# Md Yusuf Ahmed
+
+> QA Automation Engineer (SDET) in Dhaka, Bangladesh with 3+ years across SaaS, fintech and telecom. Builds Playwright automation in CI/CD, validates APIs and databases, and tests LLM chatbots for accuracy and safe behavior.
+
+## Profile
+
+- Site: https://yusufahmedd.netlify.app/
+- LinkedIn: https://www.linkedin.com/in/md-yusuf-ahmed/
+- GitHub: https://github.com/Yusuf-Hridoy
+- Resume: https://yusufahmedd.netlify.app/md-yusuf-ahmed-resume.pdf
+
+## Projects
+
+- APITrek, a live REST API testing workspace: https://apitrek.onrender.com/ (code: https://github.com/Yusuf-Hridoy/apitrek)
+- QA-Genius, an AI QA workspace for user stories, test cases and risks: https://qa-genius-ashy.vercel.app (code: https://github.com/Yusuf-Hridoy/QA-Genius)
+- Playwright web automation, a UI suite with Page Object Model and CI: https://github.com/Yusuf-Hridoy/Playwright-Project
+
+## Contact
+
+- Email: yusufahmed.sdet@gmail.com

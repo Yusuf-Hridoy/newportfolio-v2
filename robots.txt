@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /demo/
+
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: PerplexityBot
+User-agent: Claude-SearchBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+Allow: /
+Disallow: /demo/
+
+Sitemap: https://yusufahmedd.netlify.app/sitemap.xml
