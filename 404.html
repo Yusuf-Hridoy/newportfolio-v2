@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -7,28 +7,17 @@
   <title>Page not found | Md Yusuf Ahmed</title>
   <meta name="description" content="The page you are looking for was moved or does not exist.">
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#011A27">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-
-  <!-- Apply saved / system theme before paint to avoid a flash -->
-  <script>
-    (function () {
-      try {
-        var saved = localStorage.getItem("theme");
-        var theme = saved || "dark"; // dark by default; the saved choice always wins
-        document.documentElement.setAttribute("data-theme", theme);
-      } catch (e) {}
-    })();
-  </script>
+  <meta name="theme-color" content="#3B4DE0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css?v=2">
+  <!-- CSS (root-relative so it also loads when this page is served for a nested missing URL) -->
+  <link rel="stylesheet" href="/css/styles.css?v=5">
 </head>
 
 <body>
@@ -36,53 +25,28 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="./">Yusuf Ahmed</a>
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">Y</span>Md Yusuf Ahmed</a>
 
-      <nav class="main-nav" aria-label="Primary">
+      <nav class="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="./#about">About</a></li>
-          <li><a href="./#experience">Experience</a></li>
-          <li><a href="./#projects">Projects</a></li>
-          <li><a href="./#skills">Skills</a></li>
-          <li><a href="./#contact">Contact</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#experience">Experience</a></li>
+          <li><a href="/#projects">Projects</a></li>
+          <li><a href="/#toolkit">Toolkit</a></li>
+          <li><a href="/#contact">Contact</a></li>
+          <li><a class="nav-resume" href="/md-yusuf-ahmed-resume.pdf" target="_blank" rel="noopener">Résumé <span class="arrow" aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
-
-      <div class="header-actions">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
-          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
-          </svg>
-        </button>
-        <a class="button button-outline button-small" href="md-yusuf-ahmed-resume.pdf" target="_blank" rel="noopener">Resume</a>
-      </div>
     </div>
   </header>
 
-  <main id="main">
-    <section>
-      <div class="container">
-        <h1 class="section-title">Page not found</h1>
-        <p class="not-found-lead">This link is broken or the page was moved. That's a bug, and I'd like to know about it.</p>
-        <div class="hero-buttons">
-          <a class="button button-primary" href="./">Go to the home page</a>
-          <a class="button button-outline" id="report-link" href="mailto:yusufahmed.sdet@gmail.com?subject=Broken%20link%20on%20portfolio">Report this link</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Md Yusuf Ahmed</p>
+  <main id="main" class="not-found">
+    <div class="container">
+      <h1 class="not-found-title">Page not found.</h1>
+      <p class="not-found-lead">This link is broken or the page was moved. That's a bug, and I'd like to know about it.</p>
+      <a class="button button-yellow" href="/">Back to home <span aria-hidden="true">→</span></a>
     </div>
-  </footer>
-
-  <script src="js/main.js?v=2"></script>
+  </main>
 </body>
 
 </html>

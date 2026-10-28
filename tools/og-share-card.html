@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+  Source design for assets/og/og-image.png (the 1200x630 social share image).
+  build-images.mjs opens this page in Chromium and screenshots it.
+  Not part of the site.
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>OG share card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+    }
+
+    body {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 88px;
+      background: #3B4DE0;
+      color: #FFFFFF;
+      font-family: "Schibsted Grotesk", sans-serif;
+    }
+
+    .ring {
+      position: absolute;
+      top: -300px;
+      left: 520px;
+      width: 720px;
+      height: 720px;
+      border: 60px solid rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+    }
+
+    .text {
+      position: relative;
+    }
+
+    .name {
+      margin: 0;
+      font-size: 104px;
+      font-weight: 800;
+      line-height: 0.92;
+      letter-spacing: -0.055em;
+    }
+
+    .role {
+      margin: 34px 0 0;
+      color: #FFE16C;
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .focus {
+      margin: 12px 0 0;
+      color: #DDE1FF;
+      font-size: 27px;
+      font-weight: 500;
+    }
+
+    .photo {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      border: 8px solid #FFE16C;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ring"></div>
+  <div class="text">
+    <p class="name">Md Yusuf<br>Ahmed</p>
+    <p class="role">QA Automation Engineer (SDET)</p>
+    <p class="focus">Playwright · API testing · LLM quality</p>
+  </div>
+  <img class="photo" src="../assets/images/profile-photo.jpg" alt="">
+</body>
+
+</html>

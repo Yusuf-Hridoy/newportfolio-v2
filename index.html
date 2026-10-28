@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Md Yusuf Ahmed">
   <meta name="google-site-verification" content="1qQaGUGIHcW80ptFe1izY-nq0NEssZ8aBE7r75grd5A">
-  <meta name="theme-color" content="#011A27">
+  <meta name="theme-color" content="#3B4DE0">
   <link rel="canonical" href="https://yusufahmedd.netlify.app/">
 
   <meta property="og:type" content="website">
@@ -31,24 +31,13 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 
-  <!-- Apply saved / system theme before paint to avoid a flash -->
-  <script>
-    (function () {
-      try {
-        var saved = localStorage.getItem("theme");
-        var theme = saved || "dark"; // dark by default; the saved choice always wins
-        document.documentElement.setAttribute("data-theme", theme);
-      } catch (e) {}
-    })();
-  </script>
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css?v=2">
+  <link rel="stylesheet" href="css/styles.css?v=5">
 
   <script type="application/ld+json">
   {
@@ -59,7 +48,7 @@
         "@id": "https://yusufahmedd.netlify.app/#profilepage",
         "url": "https://yusufahmedd.netlify.app/",
         "name": "Md Yusuf Ahmed | QA Automation Engineer (SDET)",
-        "dateModified": "2026-10-24",
+        "dateModified": "2026-10-28",
         "mainEntity": { "@id": "https://yusufahmedd.netlify.app/#person" }
       },
       {
@@ -97,373 +86,399 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="brand" href="#top">Yusuf Ahmed</a>
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">Y</span>Md Yusuf Ahmed</a>
 
-      <nav class="main-nav" aria-label="Primary">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false">
+          <path d="M3 6h14M3 10h14M3 14h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
+          <li><a href="#toolkit">Toolkit</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-resume" href="md-yusuf-ahmed-resume.pdf" target="_blank" rel="noopener">Résumé <span class="arrow" aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
-
-      <div class="header-actions">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
-          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
-          </svg>
-        </button>
-        <a class="button button-outline button-small" href="md-yusuf-ahmed-resume.pdf" target="_blank" rel="noopener">Resume</a>
-      </div>
     </div>
   </header>
 
   <main id="main">
     <!-- Hero -->
-    <section class="hero" id="top" aria-label="Introduction">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-text">
-            <p class="test-badge" id="hero-badge" hidden>
-              <span id="hero-badge-text">This website passed its own tests.</span>
-              <a href="#site-check">What does this mean?</a>
-            </p>
-            <h1 class="hero-name">Md Yusuf Ahmed</h1>
-            <p class="hero-role">QA Automation Engineer (SDET)</p>
-            <p class="hero-summary">3+ years testing SaaS, fintech and telecom products. I build Playwright automation that runs in CI, check APIs and databases for data integrity, and test LLM chatbots for wrong or unsafe answers.</p>
-            <div class="hero-buttons">
-              <a class="button button-primary" href="md-yusuf-ahmed-resume.pdf" target="_blank" rel="noopener">Download resume</a>
-              <a class="button button-outline" href="#contact">Email me</a>
-            </div>
-            <p class="hero-links"><a href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/Yusuf-Hridoy" target="_blank" rel="noopener">GitHub</a> · <a href="mailto:yusufahmed.sdet@gmail.com">yusufahmed.sdet@gmail.com</a></p>
+    <section class="hero" aria-labelledby="hero-name">
+      <div class="hero-ring" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow eyebrow-hero"><span class="eyebrow-dot" aria-hidden="true"></span>QA Automation Engineer / SDET</p>
+          <h1 class="hero-name" id="hero-name">Md Yusuf <br>Ahmed<span class="hero-name-dot">.</span></h1>
+          <p class="hero-tagline">I find the edge cases <br>before users do.</p>
+          <p class="hero-summary">I build test automation, check APIs and data integrity, and test AI features for accuracy and safety. 3+ years across SaaS, fintech and telecom.</p>
+          <p class="hero-now"><span class="hero-now-label">Now</span> <span>Software QA Engineer at SDS Manager</span> <span class="hero-now-sep" aria-hidden="true">·</span> <span>Dhaka, Bangladesh</span></p>
+
+          <div class="hero-actions">
+            <a class="button button-yellow" href="#projects">See my work <span aria-hidden="true">↓</span></a>
+            <a class="link-line" href="mailto:yusufahmed.sdet@gmail.com">Email me <span class="arrow" aria-hidden="true">↗</span></a>
           </div>
 
-          <div class="hero-visual">
-            <aside class="glance-card" aria-label="At a glance">
-              <div class="glance-head">
-                <picture>
-                  <source srcset="assets/images/profile-photo-192.webp" type="image/webp">
-                  <img src="assets/images/profile-photo-192.jpg" alt="Md Yusuf Ahmed" width="80" height="80">
-                </picture>
-                <div>
-                  <p class="glance-label">At a glance</p>
-                  <p class="glance-name">Md Yusuf Ahmed</p>
-                </div>
-              </div>
-              <dl class="glance-facts">
-                <dt>Now</dt>
-                <dd>Software QA Engineer at SDS Manager</dd>
-                <dt>Experience</dt>
-                <dd>3+ years · SaaS, fintech, telecom</dd>
-                <dt>Based in</dt>
-                <dd>Dhaka, Bangladesh (UTC+6)</dd>
-                <dt>Open to</dt>
-                <dd>Remote SDET and AI Quality roles</dd>
-                <dt>Latest project</dt>
-                <dd><a href="https://qa-genius-ashy.vercel.app" target="_blank" rel="noopener">QA-Genius</a>, an AI QA workspace</dd>
-              </dl>
-            </aside>
+          <p class="hero-links">
+            <a href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+            <span aria-hidden="true">/</span>
+            <a href="https://github.com/Yusuf-Hridoy" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+            <span aria-hidden="true">/</span>
+            <a href="md-yusuf-ahmed-resume.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a>
+          </p>
+        </div>
 
-            <div class="terminal" id="terminal-box" role="group" aria-label="Last automated test run of this website" hidden>
-            <p class="terminal-muted-text">~/portfolio · nightly run · commit <span id="terminal-commit">…</span></p>
-            <p><span class="terminal-muted-text">$</span> npx playwright test</p>
-            <p class="terminal-muted-text">Running <span id="terminal-total">…</span> tests on 3 browsers + mobile</p>
-            <p id="terminal-highlights"></p>
-            <p><span class="terminal-ok-text" id="terminal-passed">…</span> <span class="terminal-muted-text" id="terminal-duration"></span></p>
-            <p><a id="terminal-report" href="#" target="_blank" rel="noopener">Open the full test report</a></p>
+        <div class="field-note-wrap">
+          <div class="field-note">
+            <p class="field-note-head"><span>A QA engineer’s field note</span><span class="field-note-no">No. 01</span></p>
+            <svg class="field-note-drawing" viewBox="0 0 400 240" aria-hidden="true" focusable="false">
+              <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M47 48C82 58 100 96 139 94C175 92 200 78 234 87C268 96 288 132 335 123" stroke="#3B4DE0" stroke-width="4" />
+                <path d="M234 87C226 122 190 160 176 194" stroke="#F36B45" stroke-width="3" />
+                <path d="M181 199L232 183" stroke="#F36B45" stroke-width="1.5" />
+                <path d="M49 36C49 30 52 25 58 23" stroke="#F36B45" stroke-width="2" />
+                <path d="M327 36L337 45M334 29L347 23M331 53L347 50" stroke="#F36B45" stroke-width="2" />
+                <path d="M322 114C301 126 303 160 328 162C352 164 363 134 350 119" stroke="#F36B45" stroke-width="2" />
+                <path d="M342 113L351 118L345 127" stroke="#F36B45" stroke-width="2" />
+                <path d="M311 119L321 118" stroke="#F36B45" stroke-width="2" />
+              </g>
+              <circle cx="47" cy="48" r="9" fill="#3B4DE0" />
+              <circle cx="139" cy="94" r="9" fill="#F36B45" />
+              <circle cx="234" cy="87" r="9" fill="#3B4DE0" />
+              <circle cx="335" cy="123" r="9" fill="#3B4DE0" />
+              <circle cx="174" cy="202" r="7" fill="#FFE16C" stroke="#1B1D26" stroke-width="1.5" />
+              <g class="drawing-label">
+                <text x="28" y="22">USER STORY</text>
+                <text x="112" y="129">MAP RISK</text>
+                <text x="223" y="60">TEST</text>
+                <text x="313" y="104">RETEST</text>
+                <text x="140" y="230">UNEXPECTED PATH</text>
+              </g>
+              <text class="drawing-note" x="236" y="180" transform="rotate(-8 236 180)">look for the edge case</text>
+            </svg>
+            <p class="field-note-foot">Good testing follows the question, <br>not just the happy path.</p>
+          </div>
+          <a class="sticker" href="#about">follow <br>the why <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="container hero-bottom">
+        <p>Quality is a practice, not a last-minute check.</p>
+        <a href="#about">Read my approach <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" aria-label="Highlights">
+      <div class="container stats-grid">
+        <div class="stat">
+          <p class="stat-number">3<span class="stat-plus">+</span></p>
+          <div>
+            <p class="stat-label">years in software QA</p>
+            <p class="stat-sub">SaaS · fintech · telecom</p>
           </div>
         </div>
+        <div class="stat">
+          <p class="stat-number">7</p>
+          <div>
+            <p class="stat-label">international regulations</p>
+            <p class="stat-sub">Chemical-safety workflows at SDS Manager</p>
+          </div>
         </div>
-
-        <div class="what-i-do" id="about">
-          <h2 class="what-i-do-title">What I do</h2>
-          <div class="what-i-do-grid">
-            <div class="what-card">
-              <h3>Test automation</h3>
-              <p>Playwright suites with Page Object Model, run in CI on every build.</p>
-            </div>
-            <div class="what-card">
-              <h3>API and data</h3>
-              <p>Postman and Newman, backed by PostgreSQL checks.</p>
-            </div>
-            <div class="what-card">
-              <h3>AI and LLM quality</h3>
-              <p>Chatbots tested for wrong, off-topic or unsafe answers.</p>
-            </div>
-            <div class="what-card">
-              <h3>QA tooling</h3>
-              <p>Tools that automate test cases, bug reports and standups.</p>
-            </div>
+        <div class="stat">
+          <p class="stat-number stat-number-wide">100<span class="stat-plus">+</span></p>
+          <div>
+            <p class="stat-label">test cases per release</p>
+            <p class="stat-sub">Functional, regression and UAT at SELISE</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Site check -->
-    <section id="site-check" hidden>
+    <!-- 01 How I think -->
+    <section class="section section-about" id="about" aria-labelledby="about-title">
       <div class="container">
-        <div class="site-check-box">
-          <div class="site-check-top">
-            <h2>This website tests itself <span class="badge" id="sample-badge" hidden>Sample numbers</span></h2>
-            <p>Every night, an automated test suite I wrote checks this site, the same way I test products at work. These numbers are about this website, from the last run.</p>
-            <p class="site-check-links">Last run <span id="site-check-time">…</span><span id="site-check-report-wrap"> · <a id="site-check-report" href="#" target="_blank" rel="noopener">Full report</a></span><span> · <a href="https://github.com/Yusuf-Hridoy/newportfolio-v2" target="_blank" rel="noopener">Test code</a></span></p>
-          </div>
-          <div class="site-check-grid">
-            <div class="check-cell">
-              <p class="check-number" id="check-passed">…</p>
-              <p class="check-label">tests passed</p>
-              <p class="check-note">Pages, menu, contact form and phone layout</p>
-            </div>
-            <div class="check-cell">
-              <p class="check-number" id="check-a11y">…</p>
-              <p class="check-label">accessibility problems</p>
-              <p class="check-note">Checked for keyboard and screen-reader users</p>
-            </div>
-            <div class="check-cell">
-              <p class="check-number" id="check-speed">…</p>
-              <p class="check-label">speed score</p>
-              <p class="check-note">Google Lighthouse, tested on a phone</p>
-            </div>
-            <div class="check-cell">
-              <p class="check-number" id="check-links">…</p>
-              <p class="check-label">broken links</p>
-              <p class="check-note" id="check-links-note">All links on this site</p>
-            </div>
+        <p class="eyebrow">01 / How I think</p>
+        <div class="about-grid">
+          <h2 class="section-title" id="about-title">The happy path <br>is only <span class="accent">the start.</span></h2>
+          <div class="about-text">
+            <p class="about-lead">I’m Md Yusuf Ahmed—a QA Automation Engineer who connects product risk to useful test coverage.</p>
+            <p class="about-body">I work from the intent of a feature through what can go wrong: explore the experience, validate the API and data behind it, then automate checks that help a team ship with confidence. For AI features, that also means asking whether responses stay accurate, on-topic and safe.</p>
+            <p class="about-based"><span class="about-based-arrow" aria-hidden="true">↳</span> <span>Based in Dhaka, Bangladesh (UTC+6) · Open to remote SDET and AI Quality roles</span></p>
           </div>
         </div>
+
+        <ol class="steps">
+          <li><span class="step-number">01</span> Understand the risk</li>
+          <li><span class="step-number">02</span> Probe the behavior</li>
+          <li><span class="step-number">03</span> Make it repeatable</li>
+          <li><span class="step-number">04</span> Help ship with confidence</li>
+        </ol>
       </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience">
+    <!-- 02 Experience -->
+    <section class="section section-experience" id="experience" aria-labelledby="experience-title">
       <div class="container">
-        <h2 class="section-title">Experience</h2>
+        <p class="eyebrow">02 / Experience</p>
+        <div class="section-head">
+          <h2 class="section-title" id="experience-title">Where I’ve made <br><span class="accent">quality count.</span></h2>
+          <p class="side-note">A few years across different kinds of risk. <br>Here’s what I owned and learned.</p>
+        </div>
 
-        <ol class="job-list">
-          <li class="job-row">
-            <p class="job-dates">Aug 2025 – now</p>
-            <div class="job-body">
+        <ol class="timeline">
+          <li class="job">
+            <p class="job-dates">2025 — Now <span class="job-live-dot" aria-hidden="true"></span></p>
+            <div>
+              <p class="job-company"><span class="job-company-name">SDS Manager</span> · B2B SaaS / Chemical safety</p>
               <h3 class="job-title">Software QA Engineer</h3>
-              <p class="job-company">SDS Manager · B2B SaaS platform for chemical safety compliance</p>
               <ul class="job-points">
-                <li>Built and maintain the Playwright + JavaScript automation suite (POM) for E2E and cross-browser testing; its smoke tests run automatically in the CI pipeline on every build.</li>
-                <li>Tested Safety Data Sheet (SDS) authoring and chemical management workflows, catching compliance-critical defects across 7 international regulations through API (Postman) and database (PostgreSQL) validation.</li>
-                <li>Own selected features end to end in a product-owner role: define requirements and design, then drive them through build, testing, and release.</li>
-                <li>Tested AI-powered product features, including an LLM chatbot, for response accuracy, hallucinations, off-topic or unsafe answers, and consistency across repeated prompts.</li>
-                <li>Built an internal test case management tool and Claude skills that automate bug reporting, standups, and QA research.</li>
-                <li>Diagnosed CI-only test failures, including configuration drift between local and pipeline runs and UI timing races, and stabilized pipeline results.</li>
-                <li>Mentor two junior QA engineers in test design and automation.</li>
+                <li>Build and maintain a Playwright + JavaScript Page Object Model suite for end-to-end and cross-browser coverage; CI smoke tests run on every build.</li>
+                <li>Test Safety Data Sheet authoring and chemical-management workflows across 7 international regulations, validating APIs with Postman and data with PostgreSQL.</li>
+                <li>Evaluate AI-powered features for accuracy, hallucinations, off-topic or unsafe answers, and consistency across repeated prompts.</li>
+                <li>Own selected features from requirements through release; diagnose CI-only timing and configuration issues, build internal QA tooling, and mentor two junior QA engineers.</li>
               </ul>
-              <p class="job-tools">Playwright · JavaScript · GitHub Actions · Postman · PostgreSQL · LLM testing · Claude Code · ClickUp</p>
+              <p class="tags">Playwright · JavaScript · GitHub Actions · Postman · PostgreSQL · LLM testing</p>
             </div>
           </li>
 
-          <li class="job-row">
-            <p class="job-dates">Oct 2024 – Jul 2025</p>
-            <div class="job-body">
-              <h3 class="job-title">Product Acceptance Analyst</h3>
-              <p class="job-company">SELISE Digital Platforms · Fintech and microfinance platforms</p>
+          <li class="job">
+            <p class="job-dates">2024 — 2025</p>
+            <div>
+              <p class="job-company"><span class="job-company-name">SELISE Digital Platforms</span> · Fintech / Microfinance</p>
+              <h3 class="job-title">Associate Product Acceptance Analyst</h3>
               <ul class="job-points">
-                <li>Initiated the team's Cypress automation framework with a reusable Page Object Model (POM) architecture.</li>
-                <li>Tested fintech and microfinance platform features end to end across browsers, executing 100+ test cases per release in functional, regression, and UAT scope.</li>
-                <li>Validated 50+ REST API endpoints in Postman across microfinance transaction flows, checking business logic and data integrity.</li>
-                <li>Streamlined defect reporting in Azure Boards, shortening developer turnaround on critical bugs.</li>
-                <li>Overhauled test documentation practices, improving release traceability across the team.</li>
+                <li>Initiated the team’s Cypress framework with reusable Page Object Model architecture; executed 100+ functional, regression and UAT cases per release.</li>
+                <li>Validated 50+ REST API endpoints across transaction flows, checking business logic and data integrity; streamlined defect reporting and improved release traceability.</li>
               </ul>
-              <p class="job-tools">Cypress · POM · Postman · Azure Boards · UAT</p>
+              <p class="tags">Cypress · Postman · Azure Boards · UAT</p>
             </div>
           </li>
 
-          <li class="job-row">
-            <p class="job-dates">May 2023 – Sep 2024</p>
-            <div class="job-body">
-              <h3 class="job-title">Software QA Engineer, contract</h3>
-              <p class="job-company">Banglalink via Response Ltd · One of Bangladesh's largest telecom operators</p>
+          <li class="job">
+            <p class="job-dates">2023 — 2024</p>
+            <div>
+              <p class="job-company"><span class="job-company-name">Banglalink via Response Ltd</span> · Telecom</p>
+              <h3 class="job-title">Software QA Engineer <span class="job-title-note">(Contract)</span></h3>
               <ul class="job-points">
-                <li>Tested the company's self-care mobile app (Android and iOS), website, and e-commerce store across 10+ functional modules.</li>
-                <li>Validated a production AI chatbot's responses against expected intents and behaviors: hands-on LLM quality testing on a telecom product serving millions of users.</li>
-                <li>Executed full regression, sanity, and UAT suites each release cycle and managed the defect lifecycle in JIRA with developers.</li>
+                <li>Tested Android and iOS self-care apps, the website and e-commerce across 10+ functional modules.</li>
+                <li>Validated a production AI chatbot against expected intents; ran regression, sanity and UAT cycles and managed defects with developers in JIRA.</li>
               </ul>
-              <p class="job-tools">Mobile (Android/iOS) · Chatbot testing · Regression · JIRA</p>
+              <p class="tags">Mobile QA · Chatbot testing · Regression · JIRA</p>
             </div>
           </li>
 
-          <li class="job-row">
-            <p class="job-dates">Jun 2022 – Sep 2022</p>
-            <div class="job-body">
+          <li class="job">
+            <p class="job-dates">2022</p>
+            <div>
+              <p class="job-company"><span class="job-company-name">Dewhirst Shanta</span> · ERP</p>
               <h3 class="job-title">Operation ERP System Intern</h3>
-              <p class="job-company">Dewhirst Shanta</p>
-              <ul class="job-points">
-                <li>Supported functional testing of ERP modules, identifying and reporting system defects.</li>
-              </ul>
+              <p class="job-text">Supported functional testing of ERP modules, identifying and reporting system defects.</p>
             </div>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section class="projects-section" id="projects">
+    <!-- 03 Selected work -->
+    <section class="section section-projects" id="projects" aria-labelledby="projects-title">
+      <div class="projects-ring" aria-hidden="true"></div>
+
       <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <p class="projects-lead" id="projects-lead" hidden>Every project shows its real test result from its last run.</p>
+        <p class="eyebrow">03 / Selected work</p>
+        <div class="section-head">
+          <h2 class="section-title" id="projects-title">Tools for testing <br><span class="accent">more thoughtfully.</span></h2>
+          <p class="side-note">Personal projects that turn QA work <br>into something teams can use.</p>
+        </div>
 
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-top">
-              <h3 class="project-title">APITrek</h3>
-              <span class="badge project-badge" data-project="apitrek" hidden></span>
-            </div>
-            <p class="project-text">A live REST API testing workspace with an endpoint coverage scorecard.</p>
-            <p class="project-stack">Python · FastAPI · pytest</p>
-            <p class="project-tests" data-project="apitrek" hidden></p>
-            <div class="project-links">
-              <a href="https://apitrek.onrender.com/" target="_blank" rel="noopener">Live demo</a>
-              <a href="https://github.com/Yusuf-Hridoy/apitrek" target="_blank" rel="noopener">Code</a>
-              <a href="#" data-project-report="apitrek" target="_blank" rel="noopener" hidden>Test report</a>
-            </div>
+        <div class="project-grid">
+          <article class="project project-apitrek">
+            <p class="project-number">01 / API quality</p>
+            <svg class="project-icon" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+              <circle cx="18" cy="18" r="16.5" fill="none" stroke="#1B1D26" stroke-width="0.8" />
+              <text x="18" y="22.5" text-anchor="middle">{ }</text>
+            </svg>
+            <svg class="project-art project-art-apitrek" viewBox="0 0 80 90" aria-hidden="true" focusable="false">
+              <g transform="rotate(-8 40 45)">
+                <text x="7" y="12" fill="#3B4DE0">ENDPOINT</text>
+                <path d="M15 17V27" stroke="#F36B45" stroke-width="1.2" />
+                <text x="3" y="38" fill="#3B4DE0">ASSERTION</text>
+                <path d="M15 43V53" stroke="#F36B45" stroke-width="1.2" />
+                <rect x="1" y="57" width="62" height="20" rx="10" fill="none" stroke="#3B4DE0" stroke-width="1.2" />
+                <text x="8" y="70" fill="#3B4DE0">COVERAGE</text>
+              </g>
+            </svg>
+            <h3 class="project-title">APITrek</h3>
+            <p class="project-text">A live REST API testing workspace with an endpoint-coverage scorecard, built to make checks and coverage easier to see.</p>
+            <p class="project-tags">Python · FastAPI · pytest</p>
+            <p class="project-links">
+              <a href="https://apitrek.onrender.com/" target="_blank" rel="noopener">Open live workspace<span class="visually-hidden"> for APITrek</span> <span class="arrow" aria-hidden="true">↗</span></a>
+              <a href="https://github.com/Yusuf-Hridoy/apitrek" target="_blank" rel="noopener">View source<span class="visually-hidden"> for APITrek</span> <span class="arrow" aria-hidden="true">↗</span></a>
+            </p>
           </article>
 
-          <article class="project-card">
-            <div class="project-top">
-              <h3 class="project-title">QA-Genius</h3>
-              <span class="badge project-badge" data-project="qa-genius" hidden></span>
-            </div>
-            <p class="project-text">An AI QA workspace that checks user stories, writes test cases, finds risks and gives a ship verdict.</p>
-            <p class="project-stack">Python · FastAPI · Vercel</p>
-            <p class="project-tests" data-project="qa-genius" hidden></p>
-            <div class="project-links">
-              <a href="https://qa-genius-ashy.vercel.app" target="_blank" rel="noopener">Live demo</a>
-              <a href="https://github.com/Yusuf-Hridoy/QA-Genius" target="_blank" rel="noopener">Code</a>
-              <a href="#" data-project-report="qa-genius" target="_blank" rel="noopener" hidden>Test report</a>
-            </div>
+          <article class="project project-qagenius">
+            <p class="project-number">02 / AI-assisted QA</p>
+            <svg class="project-icon" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+              <circle cx="18" cy="18" r="16.5" fill="none" stroke="#1B1D26" stroke-width="0.8" />
+              <path d="M18 13v10M13 18h10M14.5 14.5l7 7M21.5 14.5l-7 7" stroke="#1B1D26" stroke-width="1.1" stroke-linecap="round" />
+            </svg>
+            <svg class="project-art project-art-qagenius" viewBox="0 0 150 44" aria-hidden="true" focusable="false">
+              <g transform="rotate(-6 75 22)">
+                <text x="2" y="26" fill="#9A3A1A">STORY</text>
+                <path d="M2 31H28" stroke="#9A3A1A" stroke-width="0.9" />
+                <text x="34" y="26" fill="#F36B45">→</text>
+                <text x="47" y="26" fill="#9A3A1A">TEST CASES</text>
+                <path d="M47 31H96" stroke="#9A3A1A" stroke-width="0.9" />
+                <text x="103" y="26" fill="#F36B45">→</text>
+                <text x="117" y="26" fill="#9A3A1A">RISK</text>
+                <path d="M117 31H139" stroke="#9A3A1A" stroke-width="0.9" />
+              </g>
+            </svg>
+            <h3 class="project-title">QA-Genius</h3>
+            <p class="project-text">An AI QA workspace that reviews user stories, drafts test cases, surfaces risks and gives a ship verdict.</p>
+            <p class="project-tags">Python · FastAPI · Vercel</p>
+            <p class="project-links">
+              <a href="https://qa-genius-ashy.vercel.app" target="_blank" rel="noopener">Open live workspace<span class="visually-hidden"> for QA-Genius</span> <span class="arrow" aria-hidden="true">↗</span></a>
+              <a href="https://github.com/Yusuf-Hridoy/QA-Genius" target="_blank" rel="noopener">View source<span class="visually-hidden"> for QA-Genius</span> <span class="arrow" aria-hidden="true">↗</span></a>
+            </p>
           </article>
 
-          <article class="project-card">
-            <div class="project-top">
-              <h3 class="project-title">Playwright web automation</h3>
-              <span class="badge project-badge" data-project="playwright-project" hidden></span>
-            </div>
-            <p class="project-text">A Playwright + JavaScript UI suite with Page Object Model and CI on every push.</p>
-            <p class="project-stack">Playwright · JavaScript · GitHub Actions</p>
-            <p class="project-tests" data-project="playwright-project" hidden></p>
-            <div class="project-links">
-              <a href="https://github.com/Yusuf-Hridoy/Playwright-Project" target="_blank" rel="noopener">Code</a>
-              <a href="#" data-project-report="playwright-project" target="_blank" rel="noopener" hidden>Test report</a>
-            </div>
+          <article class="project project-playwright project-wide">
+            <p class="project-number">03 / End-to-end</p>
+            <svg class="project-icon" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+              <circle cx="18" cy="18" r="16.5" fill="none" stroke="#1B1D26" stroke-width="0.8" />
+              <path d="M19.5 12.5L15 18.5h5l-4.5 5" fill="none" stroke="#1B1D26" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <svg class="project-art project-art-playwright" viewBox="0 0 162 98" aria-hidden="true" focusable="false">
+              <g transform="rotate(3 80 36)">
+                <rect x="4" y="3" width="150" height="66" rx="4" fill="none" stroke="#1B1D26" stroke-width="1" />
+                <circle cx="13" cy="12" r="1.8" fill="#F36B45" />
+                <circle cx="20" cy="12" r="1.8" fill="#F36B45" />
+                <circle cx="27" cy="12" r="1.8" fill="#F36B45" />
+                <path d="M18 28H136M18 39H112M18 50H96" stroke="#4A4C57" stroke-width="0.9" />
+              </g>
+              <path d="M2 78L158 84" stroke="#1B1D26" stroke-width="0.9" stroke-dasharray="3 3" />
+              <text x="2" y="95" fill="#4A4C57" transform="rotate(3 2 95)">UI → ASSERT → CI</text>
+            </svg>
+            <h3 class="project-title">Playwright web automation</h3>
+            <p class="project-text">A JavaScript UI suite built around the Page Object Model, with CI checks on every push.</p>
+            <p class="project-tags">Playwright · JavaScript · GitHub Actions</p>
+            <p class="project-links">
+              <a href="https://github.com/Yusuf-Hridoy/Playwright-Project" target="_blank" rel="noopener">View source<span class="visually-hidden"> for Playwright web automation</span> <span class="arrow" aria-hidden="true">↗</span></a>
+            </p>
           </article>
         </div>
 
-        <p class="more-github">More on GitHub: <a href="https://github.com/Yusuf-Hridoy/Cypress-Web-Automation" target="_blank" rel="noopener">Cypress</a> · <a href="https://github.com/Yusuf-Hridoy/K6-Performance-Testing" target="_blank" rel="noopener">K6 performance</a> · <a href="https://github.com/Yusuf-Hridoy/postman-advanced-api-project" target="_blank" rel="noopener">Postman + Newman</a> · <a href="https://github.com/Yusuf-Hridoy/App-Automation-Mobile" target="_blank" rel="noopener">Appium mobile</a></p>
+        <div class="more-work">
+          <p class="more-work-label">More work, more methods</p>
+          <ul class="more-work-links">
+            <li><a href="https://github.com/Yusuf-Hridoy/Cypress-Web-Automation" target="_blank" rel="noopener">Cypress automation</a></li>
+            <li><a href="https://github.com/Yusuf-Hridoy/K6-Performance-Testing" target="_blank" rel="noopener">K6 performance</a></li>
+            <li><a href="https://github.com/Yusuf-Hridoy/postman-advanced-api-project" target="_blank" rel="noopener">Postman + Newman</a></li>
+            <li><a href="https://github.com/Yusuf-Hridoy/App-Automation-Mobile" target="_blank" rel="noopener">Appium mobile</a></li>
+            <li><a href="https://github.com/Yusuf-Hridoy" target="_blank" rel="noopener">All GitHub projects <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills">
+    <!-- 04 Toolkit -->
+    <section class="section section-toolkit" id="toolkit" aria-labelledby="toolkit-title">
       <div class="container">
-        <h2 class="section-title">Skills</h2>
-
-        <ul class="skills-list">
-          <li class="skill-item">
-            <p class="skill-label">Test automation</p>
-            <p class="skill-line">Playwright, Cypress, Selenium, Appium, Page Object Model</p>
-          </li>
-          <li class="skill-item">
-            <p class="skill-label">Languages</p>
-            <p class="skill-line">JavaScript, TypeScript, Python, SQL</p>
-          </li>
-          <li class="skill-item">
-            <p class="skill-label">API and performance</p>
-            <p class="skill-line">Postman, Newman, K6, JMeter</p>
-          </li>
-          <li class="skill-item">
-            <p class="skill-label">AI and LLM quality</p>
-            <p class="skill-line">LLM evaluation, chatbot testing, Claude Code, LangChain</p>
-          </li>
-          <li class="skill-item">
-            <p class="skill-label">CI/CD and tools</p>
-            <p class="skill-line">GitHub Actions, Git, PostgreSQL, JIRA, ClickUp</p>
-          </li>
-          <li class="skill-item">
-            <p class="skill-label">Methods</p>
-            <p class="skill-line">Risk-based testing, shift-left, regression, UAT</p>
-          </li>
-        </ul>
-
-        <h2 class="credentials-title">Education and certificates</h2>
-        <div class="credential-row">
-          <p>BSc in Computer Science and Engineering, City University</p>
-          <p class="credential-date">2018 – 2022</p>
+        <p class="eyebrow">04 / Toolkit</p>
+        <div class="section-head">
+          <h2 class="section-title" id="toolkit-title">Good tools. <br><span class="accent">Used with intent.</span></h2>
+          <p class="side-note">From browser behavior to the data <br>and decisions behind it.</p>
         </div>
-        <div class="credential-row">
-          <p>Model Context Protocol, Anthropic · <a href="https://verify.skilljar.com/c/z4tepqoezjm3" target="_blank" rel="noopener">View</a></p>
-          <p class="credential-date">2025</p>
-        </div>
-        <div class="credential-row">
-          <p>Career Essentials in Generative AI, Microsoft and LinkedIn · <a href="https://www.linkedin.com/learning/certificates/df563d9b37ba9d8db9a34430b234e7bb31881f621e4339a20adb6954388c6538" target="_blank" rel="noopener">View</a></p>
-          <p class="credential-date">2024</p>
+
+        <table class="toolkit-table">
+          <tbody>
+            <tr>
+              <th scope="row">Automation</th>
+              <td>Playwright · Cypress · Selenium · Appium · Page Object Model</td>
+            </tr>
+            <tr>
+              <th scope="row">API &amp; performance</th>
+              <td>Postman · Newman · K6 · JMeter · REST API validation</td>
+            </tr>
+            <tr>
+              <th scope="row">Languages &amp; data</th>
+              <td>JavaScript · TypeScript · Python · SQL · PostgreSQL</td>
+            </tr>
+            <tr>
+              <th scope="row">AI quality</th>
+              <td>LLM evaluation · chatbot testing · Claude Code · LangChain</td>
+            </tr>
+            <tr>
+              <th scope="row">CI/CD &amp; practice</th>
+              <td>GitHub Actions · risk-based testing · shift-left · regression · UAT</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="credentials">
+          <div>
+            <p class="credentials-label">Education</p>
+            <p class="credential-title">BSc in Computer Science and Engineering</p>
+            <p class="credential-meta">City University · 2018–2022</p>
+          </div>
+          <div>
+            <p class="credentials-label">Certificates</p>
+            <ul class="certificates">
+              <li><a href="https://verify.skilljar.com/c/z4tepqoezjm3" target="_blank" rel="noopener"><span class="credential-title">Model Context Protocol</span> <span class="credential-meta">Anthropic · 2025 <span aria-hidden="true">↗</span></span></a></li>
+              <li><a href="https://www.linkedin.com/learning/certificates/df563d9b37ba9d8db9a34430b234e7bb31881f621e4339a20adb6954388c6538" target="_blank" rel="noopener"><span class="credential-title">Career Essentials in Generative AI</span> <span class="credential-meta">Microsoft &amp; LinkedIn · 2024 <span aria-hidden="true">↗</span></span></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="contact-section" id="contact">
+    <!-- 05 Contact -->
+    <section class="section section-contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact-grid">
-        <div>
-          <h2 class="section-title">Contact</h2>
-          <p class="contact-intro">Open to remote SDET and AI Quality Engineer roles. Email is the fastest way to reach me.</p>
-          <a class="contact-email" href="mailto:yusufahmed.sdet@gmail.com">yusufahmed.sdet@gmail.com</a>
-          <p class="contact-social"><a href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/Yusuf-Hridoy" target="_blank" rel="noopener">GitHub</a></p>
+        <svg class="contact-globe" viewBox="0 0 140 140" aria-hidden="true" focusable="false">
+          <circle cx="70" cy="70" r="56" fill="none" stroke="#1B1D26" stroke-width="2.5" />
+          <ellipse cx="70" cy="70" rx="66" ry="23" fill="none" stroke="#1B1D26" stroke-width="1.4" transform="rotate(-28 70 70)" />
+          <ellipse cx="70" cy="70" rx="66" ry="23" fill="none" stroke="#1B1D26" stroke-width="1.4" transform="rotate(38 70 70)" />
+          <text x="70" y="92" text-anchor="middle">?</text>
+        </svg>
+
+        <div class="contact-main">
+          <p class="eyebrow">05 / Contact</p>
+          <h2 class="section-title" id="contact-title">Have a tricky <br>quality problem?</h2>
+          <p class="contact-text">I’m open to remote SDET and AI Quality Engineer roles. Email is the fastest way to reach me.</p>
+          <a class="button button-dark" href="mailto:yusufahmed.sdet@gmail.com">Let’s talk <span class="arrow" aria-hidden="true">↗</span></a>
         </div>
 
-        <div class="contact-form-wrap">
-          <form class="contact-form" action="https://formspree.io/f/mkoageyl" method="POST">
-            <div class="field">
-              <label class="field-label" for="contact-name">Name</label>
-              <input id="contact-name" type="text" name="name" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label class="field-label" for="contact-email">Email</label>
-              <input id="contact-email" type="email" name="email" autocomplete="email" required>
-            </div>
-            <div class="field">
-              <label class="field-label" for="contact-message">Message</label>
-              <textarea id="contact-message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="button button-primary">Send message</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
-        </div>
+        <ul class="contact-links">
+          <li><a class="contact-email" href="mailto:yusufahmed.sdet@gmail.com">yusufahmed.sdet@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/md-yusuf-ahmed/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://github.com/Yusuf-Hridoy" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+          <li><a href="md-yusuf-ahmed-resume.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a></li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <!-- Bug report strip -->
-  <aside class="bug-strip" aria-label="Report a bug">
-    <div class="container">
-      <h2>Found a bug on this site?</h2>
-      <p>Tell me. Your browser and screen size are added to the report for you.</p>
-      <p class="bug-env" id="bug-env">…</p>
-      <button type="button" class="button button-outline" id="bug-button">Report a bug</button>
-    </div>
-  </aside>
-
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Md Yusuf Ahmed</p>
-      <p class="footer-test" id="footer-test" hidden>Tested every night by GitHub Actions · last run <span id="footer-test-line"></span><span id="footer-test-report-wrap"> · <a id="footer-test-report" href="#" target="_blank" rel="noopener">report</a></span></p>
+      <p class="footer-name">Md Yusuf Ahmed.</p>
+      <p>QA Automation Engineer · Dhaka, Bangladesh</p>
+      <p>© <span id="year">2026</span></p>
+      <a class="footer-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
     </div>
   </footer>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 
 </html>
